@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <link rel="stylesheet" href="../../css/gamepage.css" />
+        <script src="../../js/jquery-3.6.0.js"></script>
+        <script src="op4.js"></script>
+        <script src="../../js/gamecontroll.js"></script>
+        <style>
+            body{background-image: url("../../../素材/背景/EV101A.png");}
+            #selection_box{display: none;}
+        </style>
+    </head>
+
+    <body>
+        <div id = "dialog"  onclick="next_move()"></div>
+        <div id = "text-box"  onclick="next_move()">
+            <p id="name"></p>
+            <p id="texts"></p>
+        </div>
+        
+        <div id = "small">
+            <img id = "small_pic" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="left">
+            <img id = "left" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="middle">
+            <img id = "middle" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="right">
+            <img id = "right" src="../../../素材/背景/transparrent.png">
+        </div>
+        
+        <div id="selection_box">
+            <p><input type="button" value="北京一直是这么堵啊" class="selection" id="option1" onclick="goto('page_5.html')"></p>
+            <p><input type="button" value="没关系，你来多晚我都等你" class="selection" id="option2" onclick="goto('page_6.html')"></p>
+            <p><input type="button" value="哈哈，等你的这段时间正好背背单词" class="selection" id="option3" onclick="goto('page_7.html')"></p>
+        </div>
+
+        <div id = "menu">
+            <button class = op>RETURN</button>&nbsp;&nbsp;
+            <button class = op>SAVE</button>&nbsp;&nbsp;
+            <button class = op>LOAD</button>&nbsp;&nbsp;
+            <button class = op>CONFIG</button>&nbsp;&nbsp;
+            <button class = op>SKIP</button>&nbsp;&nbsp;
+        </div>
+
+    </body>
+</html>

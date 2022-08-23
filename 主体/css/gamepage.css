@@ -1,0 +1,168 @@
+/*该css用于一般的游戏页面*/
+
+/*导入字体并设置默认格式*/
+@import url(fonts.css);
+*{margin: 0;padding: 0;}
+
+/*背景属性设置*/
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/*对话框*/
+#dialog{
+    /*position: absolute; 
+    bottom: 0%;
+    left: 0%;
+    width: 100%; 
+    height:25%; 
+    padding: 15px;
+    border-style: none;
+    background-image: linear-gradient(rgba(255, 59, 138, 0.1),rgba(255, 59, 138,0.9));
+    z-index: -1;*/
+    position: absolute;
+    bottom: 2%;
+    left:1%;
+    width: 98%;
+    height: 20%;
+    padding: 15px;
+    border-radius: 48px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(70, 73, 12, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+    z-index: -1;
+}
+
+/*对话*/
+#text-box{
+    position: absolute;
+    bottom: 4%;
+    left: 40%;
+    width: 70%;
+    height: 20%;
+}
+#text-box p{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: left;
+}
+
+/*小立绘（头像）*/
+#small{
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+    width: 25%;
+}
+#small img{
+    width: 80%;
+}
+
+/*菜单栏*/
+#menu{
+    position: absolute;
+    bottom: 0.5%;
+    right: 3%;
+    width: 50%;
+    height: 3%;
+}
+.op{
+    border-style: none;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    transition: 0.2s;
+}
+.op:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+}
+.op:active{
+    text-decoration: none;
+}
+
+/*大立绘*/
+.left{
+    position: absolute;
+    bottom: 0%;
+    left: 1.75%;
+    width: 31%;
+    height: 90%;
+    z-index: -2;
+}
+.middle{
+    position: absolute;
+    bottom: 0%;
+    left: 34.5%;
+    width: 31%;
+    height: 90%;
+    z-index: -2;
+}
+.right{
+    position: absolute;
+    bottom: 0%;
+    right: 1.75%;
+    width: 31%;
+    height: 90%;
+    z-index: -2;
+}
+.left img{
+    height: 100%;
+}
+.middle img{
+    height: 100%;
+}
+.right img{
+    height: 100%;
+}
+
+/*选项*/
+#selection_box{
+    position:absolute;
+    bottom: 45%;
+    left: 30%;
+    width:80%;
+}
+.selection{
+    width: 600px; 
+    height:auto;
+    margin-top: 15px;
+    padding: 25px;
+    /*border-radius: 20px; 
+    margin:10px;
+    background-color: rgba(190, 255, 250, 0.7);  
+    color: rgb(252, 102, 27);
+    text-align: center;
+    font-size:35px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    color: rgb(253, 191, 56);
+    gap: 20px;
+    
+    border-radius: 85px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(1,100,114, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.selection:hover{
+    font-size:35px;
+    color: rgb(129, 216, 250);
+    background-color: rgba(231, 157, 18, 0.459);
+}

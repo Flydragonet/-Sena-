@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>注册账户</title>
+	<link rel="shortcut icon" href="login.ico" type="image/x-icon" />
+
+	<!--
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Refresh" content="2"> -->
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+<script type="text/javascript">
+
+	
+	// 字母和数字的验证
+	jQuery.validator.addMethod("chrnum", function(value, element) {
+		var chrnum = /^([a-zA-Z0-9]+)$/;
+		return this.optional(element) || (chrnum.test(value));
+	}, "只能输入数字和字母(字符A-Z, a-z, 0-9)");
+
+	//下面是表单拦截提示，可取消，否则无法跳转
+	/*
+	$.validator.setDefaults({
+		submitHandler: function() {
+			//alert("提交事件!");
+		}
+	});*/
+	$().ready(function() {
+	// 在键盘按下并释放及提交后验证提交表单
+	$("#loginform").validate({
+	    rules: {
+	      name: "required",//用户名
+		  //密码是6位以上
+	      password: {
+	        required: true,
+			minlength:6,
+			maxlength:10,
+	        chrnum: true
+	      },
+		  //验证密码
+	      repassword: {
+	        required: true,			
+	        chrnum: true,
+	        equalTo: "#password"
+	      },
+		  //手机号
+	      phone: {
+	        required: true,
+			mobile:true
+	      },
+	    },
+	    messages: {
+	      name: "请输入您的用户名",
+	      password: {
+	        required: "请输入密码",
+			minlength: "请输入6~10位密码",
+			maxlength:"请输入6~10位密码"
+	      },
+	      repassword: {
+	        required: "请输入密码",
+	        equalTo: "两次密码输入不一致"
+	      }
+	    }
+		});
+	});
+	
+</script>
+<style>
+.error{
+	color:red;
+}
+</style>
+</head>
+ 
+<body>
+    <section>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h2>注册</h2>
+                    <form id = "loginform" method="post" name = "form1">
+                        <div class="inputBox">
+                            <input type="text" placeholder="账户" name="id" id="id">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="请输入6~10位密码" name="password" id="password">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="再次输入密码" name="password" id="repassword">
+                        </div>							
+                        <div class="inputBox">
+							<input type="submit" value="注册" onclick="save_data()" id="input1"> 
+                        </div>
+						<script>
+							function save_data()
+							{
+    							var username = document.getElementById("id").value;
+    							var password = document.getElementById("password").value;
+    							localStorage.setItem("username",username);
+    							localStorage.setItem("password",password);
+    							window.alert("注册成功！");
+								window.location.assign("login.html");
+							}
+						</script>
+                        <p class="forget">已有账户?<a href="login.html">
+                                点击登录
+                            </a></p>
+                    </form>
+                </div>
+				</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
