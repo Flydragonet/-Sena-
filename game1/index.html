@@ -1,0 +1,69 @@
+<html>
+
+<head>
+	<meta charset="utf8">
+	<title>吃豆游戏</title>
+	<link rel="shortcut icon" href="favicon.png">
+	<style>
+		body {
+			background-image: url("../素材/背景/ETC_BK023D.png");
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+
+		.sena {
+			display: block;
+			float: right;
+			margin-top: 290px;
+		}
+
+		.sena img {
+			width: 250px;
+		}
+
+		.wrapper {
+			width: 960px;
+			margin: 0 auto;
+			line-height: 36px;
+			text-align: center;
+			color: rgb(64, 184, 28);
+		}
+
+		canvas {
+			display: block;
+			background: #000;
+		}
+
+		.mod-botton {
+			height: 32px;
+			padding: 15px 0;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="sena">
+			<img src="../素材/大立绘/ST01C_C030.png" alt="">
+		</div>
+		<div class="wrapper">
+			<canvas id="canvas" width="960" height="640">不支持画布</canvas>	
+			<h2>按［空格］开始/暂停补充体力</h2>
+		</div>
+		<script src="game.js"></script>
+		<script src="index.js"></script>
+		<div style="text-align:center;">
+		</div>
+	</div>
+
+</body>
+
+</html>
