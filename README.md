@@ -1,2 +1,2 @@
 # -Sena-
-这是可持续化数组的galgame
+这是可持久化数组的galgame
