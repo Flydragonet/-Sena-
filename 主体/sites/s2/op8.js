@@ -9,9 +9,9 @@ var op =
             "你想去哪里玩呢",
             ],
     
-    "small":["FA01A_A010","FA01A_A010"],
+    "small":["FA01A_A030","FA01A_A030"],
 
-    "big":["none","none","none"],
+    "big":["ST01C_A030","ST01C_A030"],
 
-    "bigpos":["none","none","none"]
+    "bigpos":["middle","middle"]
 };

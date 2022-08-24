@@ -9,10 +9,10 @@ var op =
     
     "texts":["我都说了我不想去网吧了，你要玩你自己玩吧","Sena酱气冲冲地走了"],
     
-    "small":["FA01A_A110","FA01A_A110"],
+    "small":["FA01A_A100","FA01A_A100"],
 
-    "big":["none"],
+    "big":["ST01C_A100"],
 
-    "bigpos":["none"]
+    "bigpos":["middle"]
 };
 

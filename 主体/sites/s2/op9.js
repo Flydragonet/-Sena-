@@ -9,9 +9,9 @@ var op =
             "换个地方吧",
             ],
     
-    "small":["FA01A_A100","FA01A_A100"],
+    "small":["FA01A_A060","FA01A_A060"],
 
-    "big":["none","none","none"],
+    "big":["ST01C_A060","ST01C_A060"],
 
-    "bigpos":["none","none","none"]
+    "bigpos":["middle","middle"]
 };
