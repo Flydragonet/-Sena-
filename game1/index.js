@@ -560,7 +560,7 @@
 					else {
 						likability = 3;
 					}
-					var url = "../after.html?likability=" + likability;
+					var url = "../game2/index.html";
 					window.location.href = url;
 			}
 		});

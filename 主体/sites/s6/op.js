@@ -1,7 +1,7 @@
 var op = 
 {   "type":0,
 
-    "nextpage":"s7/page_29.html",
+    "nextpage":"../../game1/index.html",
 
     "steps":8,
     
