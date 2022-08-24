@@ -89,6 +89,12 @@ function next_move(){
     }
 };
 
+//保存函数
+function Save(GameName,GameAddress){
+    localStorage.setItem("GameName",GameName);
+    localStorage.setItem("GameAddress",GameAddress);
+    alert(GameName + "保存成功");
+}
 
 
 

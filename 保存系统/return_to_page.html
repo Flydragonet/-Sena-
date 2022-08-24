@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+		<script src="../../js/jquery-3.6.0.js"></script>
+		
+		<script language="javascript">
+			
+//			location.replace(localStorage.GameAddress + ".html");
+			function goto(apage){
+ 				$("body").fadeOut(1000,function(){window.location.replace(apage);})
+			}; // 试图借助这个函数
+//			window.onload = goto(localStorage.GameAddress + ".html");
+			window.onload = function()
+        	{
+            	window.open(localStorage.GameAddress + ".html"); //目前使用的这个函数可以修改
+//				goto(localStorage.GameAddress + ".html");
+        	}
+			
+		</script>
+	</head>
+	
+	<body>
+<!--		<form onSubmit="load()"><button type="submit">点击跳转</button></form>-->
+	
+	</body>

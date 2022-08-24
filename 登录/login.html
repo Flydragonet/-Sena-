@@ -53,6 +53,14 @@
 	});
 	
 </script>
+	<script>
+		function load()
+		{
+			alert("正在加载" + localStorage.GameName);
+			var t = window.open("_self");
+			t.location = localStorage.GameAddress + ".html";
+		}
+	</script>
 <style>
 .error{
 	color:red;
@@ -95,6 +103,7 @@
 							}
 						</script>
 						<p class="forget"><a href="../主体/sites/s1/page_3.html">游客模式，直接开始！</a></p>
+						<p class="forget"><a href="../保存系统/return_to_page.html">返回进度</a></p>
 						<p class="forget"><a href="../成就系统/achievement.html">成就系统</a></p>
                         <p class="forget">没有账户?<a href="register.html">
                                 注册
