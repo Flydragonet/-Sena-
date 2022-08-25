@@ -53,7 +53,7 @@ body{
 }
 #text-box p{
     color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: LXGWWenKai-Bold, sans-serif;
     font-size: 30px;
     text-align: left;
     text-shadow: 2px 2px 5px black;
@@ -75,24 +75,29 @@ body{
 /*菜单栏*/
 #menu{
     position: absolute;
-    bottom: 0.5%;
+    bottom: 2%;
     right: 3%;
     width: 50%;
     height: 3%;
 }
 .op{
+    float: right;
     border-style: none;
-    font-family: Arial;
+    font-family: Qaligo;
     color: white;
-    font-size: 20px;
+    font-size: 12px;
     background-color: rgba(0,0,0,0);
     transition: 0.2s;
+
+    margin: 0px 10px 0px 10px;
 }
 .op:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.3);
     text-decoration: none;
 }
 .op:active{
+    box-shadow: none;
     text-decoration: none;
 }
 
@@ -141,7 +146,7 @@ body{
 .selection{
     width: 600px; 
     height:auto;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 25px;
     /*border-radius: 20px; 
     margin:10px;
@@ -153,6 +158,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size:30px;
+    font-family: 方正清刻本悦宋简体;
     color: rgb(233, 233, 233);
     gap: 20px;
     text-shadow: 2px 2px 5px black;
@@ -166,7 +172,16 @@ body{
     border-right: 2px rgba(40,40,40,0.35) solid;
 }
 .selection:hover{
-    /*font-size:35px;*/
+    transform: translateX(4px);
+    transform: translateY(-4px);
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 8px 8px;
+    color: rgb(162, 204, 251);
+    /*background-color: rgba(231, 157, 18, 0.459);*/
+}
+.selection:active{
+    transform: translateY(4px);
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 8px 8px;
     color: rgb(169, 209, 255);
     /*background-color: rgba(231, 157, 18, 0.459);*/
 }

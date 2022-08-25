@@ -1,1 +1,12 @@
-/**/
+@font-face {
+    font-family: "LXGWWenKai-Bold";
+    src: url(../fonts/LXGWWenKai-Bold.ttf);
+}
+@font-face {
+    font-family: "Qaligo";
+    src: url(../fonts/Qaligo.otf);
+}
+@font-face {
+    font-family: "方正清刻本悦宋简体";
+    src: url(../fonts/方正清刻本悦宋简体.TTF);
+}
