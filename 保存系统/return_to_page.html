@@ -3,18 +3,44 @@
     <head>
         <meta charset="utf-8"/>
         <title></title>
-		<script src="../../js/jquery-3.6.0.js"></script>
 		
 		<script language="javascript">
 			
-//			location.replace(localStorage.GameAddress + ".html");
 			function goto(apage){
  				$("body").fadeOut(1000,function(){window.location.replace(apage);})
-			}; // 试图借助这个函数
-//			window.onload = goto(localStorage.GameAddress + ".html");
+			}; // 试图借助这个函数，尚未实现淡入
+
 			window.onload = function()
         	{
-            	window.open(localStorage.GameAddress + ".html"); //目前使用的这个函数可以修改
+				if(window.localStorage.userid != undefined){
+					var index = window.localStorage.userid;
+					if(index == -1){
+						// alert("游客模式无法保存进度"); 
+						alert("正在以游客身份进入:"+localStorage.GameName);
+						window.open(localStorage.GameAddress + ".html");
+					}
+					var array = JSON.parse(window.localStorage.userArr);
+					if(array[index].GameName){
+						var GameName = array[index].GameName;
+						var GameAddress = array[index].GameAddress;
+						alert("正在进入:"+GameName);
+						window.open(GameAddress+".html");
+					} else{
+						alert("未查询到进度");
+						window.open("../登录/login.html");
+					}
+				}else{
+					alert("请先开始游戏");
+					window.open("../登录/login.html");
+           		}
+
+				// if(localStorage.GameAddress != undefined){
+				// 	window.open(localStorage.GameAddress + ".html"); //目前使用的这个函数可以修改
+				// }
+            	// else{
+				// 	alert("未查询到保存进度");
+					
+				// }
 //				goto(localStorage.GameAddress + ".html");
         	}
 			
@@ -22,6 +48,5 @@
 	</head>
 	
 	<body>
-<!--		<form onSubmit="load()"><button type="submit">点击跳转</button></form>-->
 	
 	</body>

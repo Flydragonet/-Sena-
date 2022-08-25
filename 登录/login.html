@@ -89,21 +89,59 @@
 							{
     							var username_text = document.getElementById("username").value;  
     							var password_text = document.getElementById("password").value;
-    							var user_name = localStorage.getItem("username");
-    							var user_password = localStorage.getItem("password");
-    							if(username_text==user_name && password_text==user_password)
-    							{
-									window.alert("登入成功");
-									window.open("../主体/sites/s1/page_3.html");
-									/*window.location.assign("");*/
-    							}
-    							else
-    							{
-        							window.alert("登入失败");
-    							}
+								/* ------------ */
+    							var isHad = false; //定义一个开关变量
+								var index = 0 ; //定义一个下标确定用户
+								if(window.localStorage.userArr){//判断是否存在
+									alert(window.localStorage.userArr);
+									var array = JSON.parse(window.localStorage.userArr);
+									alert(obj[0].username + "：" + obj[0].score);
+								}else{
+									alert("请先注册一个用户");
+									return;
+								}
+								for(var i =0;i<array.length;i++){
+									if(username_text==array[i].username){  //有这个账号
+										isHad=true;
+										index=i;
+									}
+								}
+								if(isHad){  //如果存在
+									if(password_text==array[index].password){
+										alert("登入成功");
+										window.localStorage.userid = index;
+										if(array[index].Gamename == undefined){
+											window.open("../主体/sites/s1/page_3.html"); //向下兼容
+										}
+										else return;  // 在已经有进度的情况下，登录后不直接进入游戏										
+									}else{
+										alert("密码错误");
+									}
+								}else{  //账号不存在或输入错误
+									alert('账号不存在或输入错误');
+								}
+								// var user_name = localStorage.getItem("username");
+    							// var user_password = localStorage.getItem("password");
+    							// if(username_text==user_name && password_text==user_password)
+    							// {
+     							// 	window.alert("登入成功");
+								// 	window.location.assign("");
+    							// }
+    							// else
+    							// {
+        						// 	window.alert("登入失败");
+    							// }
 							}
 						</script>
-						<p class="forget"><a href="../主体/sites/s1/page_3.html">游客模式，直接开始！</a></p>
+						<p class="forget"><a href="../保存系统/游客进入.html">游客模式，直接开始！</a></p>
+						 <p class="forget" id="user_start"></p> <!--登录之后才有 开始游戏 这个按钮 -->
+						<script>
+							var index = window.localStorage.userid;
+							if(index != undefined && index >= 0){
+								document.getElementById("user_start").innerHTML = '<a href="../主体/sites/s1/page_3.html">开始游戏</a>';
+							}
+						</script>
+    							
 						<p class="forget"><a href="../保存系统/return_to_page.html">返回进度</a></p>
 						<p class="forget"><a href="../成就系统/achievement.html">成就系统</a></p>
                         <p class="forget">没有账户?<a href="register.html">
