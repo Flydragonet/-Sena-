@@ -15,4 +15,8 @@ var op =
 
     "bigpos":["none"]
 };
-
+function MusicPlayer() {
+	var music=document.getElementById("music");
+	var status=1;
+	music.play();
+}
