@@ -9,7 +9,12 @@ var click = 0;//当前点击次数
 function next_text(){
     $("#texts").hide();
     $("#name").hide();
-    document.getElementById("name").innerHTML = "【" + op.name[click] + "】";
+    if(op.name[click]!="旁白"){
+        document.getElementById("name").innerHTML = "【" + op.name[click] + "】";
+    }
+    else{
+        document.getElementById("name").innerHTML = "";
+    }
     document.getElementById("texts").innerHTML =  op.texts[click];
     $("#texts").fadeIn();
     $("#name").fadeIn();

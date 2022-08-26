@@ -1,7 +1,7 @@
 var op = 
 {   "type":0,
 
-    "nextpage":"s8/page_30.html",
+    "nextpage":"s6/page_27-2.html",
 
     "steps":9,
     
@@ -16,7 +16,7 @@ var op =
             "啊这，我们还不是情侣…………",
             "啊哈哈，不好意思呢，但还是请你们收下吧","你和Sena酱一人拿了一个项链，装到了包里"],
     
-    "small":["FA01A_B030","none","none","none","none","none","FA01A_B081","none","none"],
+    "small":["FA01A_A030","none","none","none","none","none","FA01A_B081","none","none"],
 
     "big":["ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B081","ST01C_B081","ST01C_B081",],
 

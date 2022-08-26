@@ -75,8 +75,8 @@ body{
 /*菜单栏*/
 #menu{
     position: absolute;
-    bottom: 2%;
-    right: 3%;
+    bottom: 3%;
+    right: 5%;
     width: 50%;
     height: 3%;
 }

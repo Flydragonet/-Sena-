@@ -3,22 +3,23 @@ var op =
 
     "nextpage":"index.html",
 
-    "steps":8,
+    "steps":10,
     
-    "name":["Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱",],
+    "name":["Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","我","我","Sena酱",],
     
-    "texts":["确实呢，我也应该直面自己的内心了","我啊，每次回你微信消息都会斟酌很久，生怕说错话；",
-            "每次出门与你见面之前都会换好几身衣服，为了吸引你的注意；",
-            "每次上课的时候我都会悄悄坐在你前面，为了让你多看到我几眼",
-            "但是我一直欺骗自己，告诉自己我和你只是普通朋友而已",
-            "时到今日，我也不能再嘴硬下去了",
-            "我想说……","我接受你的告白，我们在一起吧！",],
+    "texts":["唉，事到如今，我也不能嘴硬了呢","你这人啊",
+            "这种事直接跟我说就好了嘛",
+            "谈恋爱还是得真诚一些呢",
+            "像今天这种事，如果你以前不担心这担心那，直接跟我说，不就不会发生了吗",
+            "以后，跟我在一块，放开一点",
+            "你看我是不是有什么事都跟你说","好…………我明白了",
+        "那么，你的意思是答应我的告白了？","呵呵，暂时答应了吧，之后还是看你表现呢"],
     
-    "small":["FA01A_A010","FA01A_A010","FA01A_A060","FA01A_A060","FA01A_A120","FA01A_A120","FA01A_A121","FA01A_C031"],
+    "small":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none",],
 
-    "big":["none","none","none","none","none","none","none","none","none","none","none","none","none",],
+    "big":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none",],
 
-    "bigpos":["none","none","none","none","none","none","none","none","none","none","none","none","none",]
+    "bigpos":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none",]
 };
 function MusicPlayer() {
 	var music=document.getElementById("music");

@@ -1,26 +1,21 @@
 var op = 
-{   "type":0,
-
-    "nextpage":"../../game1/index.html",
-
-    "steps":8,
+{   "type":1,
     
-    "name":["旁白","旁白","旁白","我","旁白","活动主持人","Sena酱","我",],
+    "steps":10,
     
-    "texts":["吃完午饭后，你们又上了商业街",
-            "商业街很大，仿佛永远逛不完",
-            "你们走到了一个广场，发现广场上有一群人聚",
-            "那是啥，过去看看吧",
-            "你们走过去，发现是商场在举办活动",
-            "（大声呼喊）在商场消费的顾客，可以参与小游戏的游玩，获胜两场者可以获得精美礼品",
-            "呕吼？你要不要试试去，正好给我们这趟留个纪念品呢",
-            "交给我吧！"],
+    "name":["旁白","旁白","Sena酱","Sena酱","我","Sena酱","Sena酱","我","Sena酱","Sena酱",],
     
-    "small":["none","none","none","none","none","none","FA01A_A010","none"],
+    "texts":["中关村被各种大学包围","所以这里有许多面向学生群体的接地气商场",
+            "让我猜一猜","你是不是没有陪女孩子逛过街",
+            "放过孩子吧，孩子单身十九年，怎么可能跟女孩子逛过街","嘿嘿，今天就让我教教你怎么陪女生逛街",
+            "万一你以后有女朋友了，你可得陪她逛街哦","（“万一”是吧…………）",
+            "好，那就从挑衣服开始吧","你感觉我适合什么穿衣风格呢？",],
+    
+    "small":["none","none","FA01A_A060","FA01A_A060","none","FA01A_C030","FA01A_C030","none","FA01A_D020","FA01A_D020"],
 
-    "big":["none","none","none","none","none","none","none","none",],
+    "big":["none","none","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_D020","ST01C_D020",],
 
-    "bigpos":["none","none","none","none","none","none","none","none",]
+    "bigpos":["none","none","right","right","right","right","right","right","right","right"]
 };
 function MusicPlayer() {
 	var music=document.getElementById("music");

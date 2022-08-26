@@ -3,18 +3,18 @@ var op =
 
     "nextpage":"index.html",
 
-    "steps":8,
+    "steps":12,
     
-    "name":["Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱",],
+    "name":["Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱","Sena酱",],
     
-    "texts":["真是的……","你突然这么说，我都不知道该怎么回复你了……",
-            "怎么说呢",
-            "我并不是想拒绝你的表白",
-            "但是我的心中仍存有顾虑",
-            "我还不能准确确定你是我喜欢的人",
-            "我希望你能暂时放下这份感情","咱们还是再互相了解一段时间吧……",],
+    "texts":["呵呵……","你怎么回事",
+            "这么快就告白？","怎么说呢……",
+            "我不想直接拒绝你","但是你确实有些我不能接受的点",
+            "比如说，今天这个事","如果你早点跟我说，不就不会引发今天的事故了吗",
+            "谈恋爱，讲究一个真诚","有什么事，沟通就好了，何必非要瞒着呢",
+            "总之……","我可能还不能接受你的告白",],
     
-    "small":["FA01B_B100","FA01B_B100","FA01B_B100","FA01B_A060","FA01B_A060","FA01B_A060","FA01B_A060","FA01B_B100"],
+    "small":["none","none","none","none","none","none","none","none","none","none","none","none","none",],
 
     "big":["none","none","none","none","none","none","none","none","none","none","none","none","none",],
 

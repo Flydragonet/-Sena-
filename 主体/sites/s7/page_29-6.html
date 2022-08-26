@@ -5,7 +5,7 @@
         <title></title>
         <link rel="stylesheet" href="../../css/gamepage.css" />
         <script src="../../js/jquery-3.6.0.js"></script>
-        <script src="op.js"></script>
+        <script src="op6.js"></script>
         <script src="../../js/gamecontroll.js"></script>
         <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3"><!--背景音乐文件-->
         </audio>
@@ -15,8 +15,9 @@
               MusicPlayer();
             }
         </script>
+
         <style>
-            body{background-image: url("../../../素材/背景/ETC_BK000E.png");}
+            body{background-image: url("../../../素材/背景/ETC_BK017E.png");}
         </style>
     </head>
 
@@ -41,11 +42,10 @@
         </div>
         
         <div id = "menu">
-            <button class = op>RETURN</button>&nbsp;&nbsp;
-            <button class = op onClick="Save('场景8第30页','../主体/sites/s8/page_30')">SAVE</button>&nbsp;&nbsp;
-            <button class = op>LOAD</button>&nbsp;&nbsp;
+            <button class = op onclick="Return()">RETURN</button>&nbsp;&nbsp;
+            <button class = op onClick="Save('场景7第29.6页','../主体/sites/s7/page_29-6')">SAVE</button>&nbsp;&nbsp;
             <button class = op>CONFIG</button>&nbsp;&nbsp;
-            <button class = op>SKIP</button>&nbsp;&nbsp;
         </div>
+
     </body>
 </html>

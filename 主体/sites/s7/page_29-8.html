@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <link rel="stylesheet" href="../../css/gamepage.css" />
+        <script src="../../js/jquery-3.6.0.js"></script>
+        <script src="op8.js"></script>
+        <script src="../../js/gamecontroll.js"></script>
+        <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3"><!--背景音乐文件-->
+        </audio>
+        
+        <script>
+            window.onclick = function(){
+              MusicPlayer();
+            }
+        </script>
+
+        <style>
+            body{background-image: url("../../../素材/背景/ETC_BK017E.png");}
+        </style>
+    </head>
+
+    <body>
+        <div id = "dialog"  onclick="next_move()"></div>
+        <div id = "text-box"  onclick="next_move()">
+            <p id="name"></p>
+            <p id="texts"></p>
+        </div>
+        
+        <div id = "small">
+            <img id = "small_pic" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="left">
+            <img id = "left" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="middle">
+            <img id = "middle" src="../../../素材/背景/transparrent.png">
+        </div>
+        <div class="right">
+            <img id = "right" src="../../../素材/背景/transparrent.png">
+        </div>
+        
+        <div id = "menu">
+            <button class = op onclick="Return()">RETURN</button>&nbsp;&nbsp;
+            <button class = op onClick="Save('场景7第29.8页','../主体/sites/s7/page_29-8')">SAVE</button>&nbsp;&nbsp;
+            <button class = op>CONFIG</button>&nbsp;&nbsp;
+        </div>
+
+    </body>
+</html>
