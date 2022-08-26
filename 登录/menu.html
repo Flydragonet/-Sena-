@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("../主体/css/fonts.css");
+        *{margin: 0;padding: 0;}
+        body{
+            background-image: url("background.png");
+            background-size: 100% 100%;
+        }
+        section {
+            /* 相对定位 */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /*background-image: url('C:\Users\hp\Desktop\登录\img\2.png');*/
+        }
+        .container {
+            position: relative;
+            width: 400px;
+            min-height: 400px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h2
+        {
+            position: relative;
+            color: #00aaff;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            cursor: pointer;
+            text-align: left;
+        }
+        a
+        {
+            text-decoration: none;
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            font-family: 方正清刻本悦宋简体;
+            text-shadow: 2px 2px 5px black;
+            line-height: 65px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h2 id="logintitle"></h2>
+            <script>
+                document.getElementById("logintitle").innerHTML = "欢迎，" + window.localStorage.username;
+            </script>
+            <p><a href="../主体/sites/s1/page_3.html">新游戏</a></p>
+            <p><a href="" id="continuegame">继续游戏</a></p>
+            <p><a href="../成就系统/achievement.html">成就</a></p>
+            <p><a href="./introduction/intro.html">关于我们</a></p>
+            <p><a href="login.html" style="font-size:30px;text-align: right;">退出登录</a></p>
+
+            <script>
+                //如果没有存档数据，就让"继续游戏"的字体变灰
+                if (window.localStorage.GameAddress == "undefined")
+                {
+                    document.getElementById("continuegame").style.color = "#aaaaaa";
+                    document.getElementById("continuegame").href = "menu.html";
+                }
+                else
+                {
+                    document.getElementById("continuegame").style.color = "#ffffff";
+                    document.getElementById("continuegame").href = window.localStorage.GameAddress + ".html";
+                }
+            </script>
+
+        </div>
+    </section>
+</body>

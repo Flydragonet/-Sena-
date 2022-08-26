@@ -94,10 +94,7 @@ function Save(GameName,GameAddress){
     // if(window.localStorage.userid){
         var index = window.localStorage.userid;
         if(index == -1 || index == undefined){
-            localStorage.setItem("GameName",GameName);
-            localStorage.setItem("GameAddress",GameAddress);
-            alert(GameName + "保存成功");
-            window.localStorage.userid = -1; // 没登录的时候数据存在单个全局变量里，不存在localstorage.userArr中
+            alert("未能确定当前用户状态，保存失败")
             return;
         }
         var array = JSON.parse(window.localStorage.userArr);
