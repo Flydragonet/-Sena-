@@ -73,7 +73,7 @@
             <!-- 登录框 -->
             <div class="container">
                 <div class="form">
-                    <h2>登录</h2>
+                    <h2 id="logintitle">登录</h2>
                     <form id = "loginform" method="post" name = "form1">
                         <div class="inputBox">
                             <input type="text" placeholder="账户" id="username">
@@ -95,7 +95,7 @@
 								if(window.localStorage.userArr){//判断是否存在
 									alert(window.localStorage.userArr);
 									var array = JSON.parse(window.localStorage.userArr);
-									alert(obj[0].username + "：" + obj[0].score);
+									//alert(obj[0].username + "：" + obj[0].score);
 								}else{
 									alert("请先注册一个用户");
 									return;
@@ -110,7 +110,7 @@
 									if(password_text==array[index].password){
 										alert("登入成功");
 										window.localStorage.userid = index;
-										if(array[index].Gamename == undefined){
+										if(array[index].GameName == undefined){
 											window.open("../主体/sites/s1/page_3.html"); //向下兼容
 										}
 										else return;  // 在已经有进度的情况下，登录后不直接进入游戏										
