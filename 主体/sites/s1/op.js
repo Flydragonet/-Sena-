@@ -22,6 +22,15 @@ var op =
 };
 function MusicPlayer() {
 	var music=document.getElementById("music");
-	var status=1;
 	music.play();
+    music.loop=false;
+    music.preload=true;
+    music.volume=1;
+}
+function MusicPlayer2() {
+	var music=document.getElementById("music2");
+	music.play();
+    music.loop=false;
+    music.preload=true;
+    music.volume=1;
 }
