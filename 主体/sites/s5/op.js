@@ -17,8 +17,3 @@ var op =
 
     "bigpos":["none","none","left","left","left","left","left","left","left","left"]
 };
-function MusicPlayer() {
-	var music=document.getElementById("music");
-	var status=1;
-	music.play();
-}
