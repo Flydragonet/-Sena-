@@ -15,7 +15,7 @@ var op =
             "等下……这件事……一时也说不清","好家伙，没想到这种事你都瞒着我",
             "看你平常说话呆呆的，我还以为你只是不善言辞","没想到是有很多秘密，心里有鬼是吧",],
     
-    "small":["FA02A_A100","FA02A_A100","FA02A_D070","FA02A_D070","FA02A_D070","FA01A_A100","FA02A_C030","FA02A_C030","FA01A_A140","FA01A_A140","none","FA01A_B070","FA01A_B070","FA01A_B070",],
+    "small":["FA02A_A090","FA02A_A090","FA02A_D070","FA02A_D070","FA02A_D070","FA01A_A100","FA02A_C030","FA02A_C030","FA01A_A140","FA01A_A140","none","FA01A_B070","FA01A_B070","FA01A_B070",],
 
     "big":["none","none","none","none","none","none","none","none","none","none","none","none","none","none",],
 

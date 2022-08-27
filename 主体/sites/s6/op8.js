@@ -1,7 +1,7 @@
 var op = 
 {   "type":0,
 
-    "nextpage":"s7/page_29-7.html",
+    "nextpage":"s7/page_29.html",
     
     "steps":8,
     

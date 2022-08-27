@@ -9,11 +9,11 @@ var op =
     
     "texts":["啊？","有吗？","这里太热了，赶紧去找餐厅吃午饭吧","Sena酱加快了步伐"],
     
-    "small":["FA01A_D090","FA01A_D090","FA01A_A101","呃呃"],
+    "small":["FA01A_D090","FA01A_D090","FA01A_A101","none"],
 
-    "big":["ST01C_D091","ST01C_D091","ST01C_D091","ST01C_D091"],
+    "big":["ST01C_D091","ST01C_D091","ST01C_D091","none"],
 
-    "bigpos":["middle","middle","middle","middle"]
+    "bigpos":["middle","middle","middle","none"]
 };
 function MusicPlayer() {
 	var music=document.getElementById("music");

@@ -560,7 +560,7 @@
 					else {
 						likability = 3;
 					}
-					var url = "../game2/index.html";
+					var url = "../主体/sites/s6/page_27-1.html";
 					window.location.href = url;
 			}
 		});

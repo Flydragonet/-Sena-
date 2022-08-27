@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+
+        <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/flower.mp3" volume="1.0"></audio>
+        <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src=".mp3" volume="1.0"></audio>
+        <script>
+            var nowplay, num = 0;
+            setInterval(function(){
+                if (nowplay != window.localStorage.nowbgm)
+                {
+                    nowplay = window.localStorage.nowbgm;
+                    $("#music" + num).animate({volume:"0.0"}, 2000);
+                    num = (num + 1) % 2; //取模，实现交叉渐变
+                    document.getElementById("music" + num).src = "../../素材/音乐/" + window.localStorage.nowbgm + ".mp3";
+                    $("#music" + num).animate({volume:"1.0"}, 2000);
+                }
+            }, 1000);
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="window.localStorage.nowbgm = 'flower'">播放</button>
+        <button type="button" onclick="musicout()">渐出</button>
+    </body>
+</html>

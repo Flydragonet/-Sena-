@@ -13,7 +13,7 @@ function next_text(){
         document.getElementById("name").innerHTML = "【" + op.name[click] + "】";
     }
     else{
-        document.getElementById("name").innerHTML = "";
+        document.getElementById("name").innerHTML = "<br>";
     }
     document.getElementById("texts").innerHTML =  op.texts[click];
     $("#texts").fadeIn();

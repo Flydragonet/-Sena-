@@ -7,16 +7,14 @@
         <script src="../../js/jquery-3.6.0.js"></script>
         <script src="op9.js"></script>
         <script src="../../js/gamecontroll.js"></script>
-        <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3"><!--背景音乐文件-->
-        </audio>
         
+        <!--当前界面的bgm-->
         <script>
-            window.onclick = function(){
-              MusicPlayer();
-            }
+            window.localStorage.nowbgm = "everyday";
         </script>
+
         <style>
-            body{background-image: url("../../../素材/背景/EV101A.png");}
+            body{background-image: url("../../../素材/背景/ETC_BK008D.png");}
             #selection_box{display: none;}
         </style>
     </head>

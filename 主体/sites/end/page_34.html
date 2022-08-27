@@ -5,13 +5,9 @@
         <title></title>
         <link rel="stylesheet" href="../../css/gamepage.css" />
         <script src="../../js/jquery-3.6.0.js"></script>
-        <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3"><!--背景音乐文件-->
-        </audio>
-        
+        <!--当前界面的bgm-->
         <script>
-            window.onclick = function(){
-              MusicPlayer();
-            }
+            window.localStorage.nowbgm = "firstlove";
         </script>
         <style>
             body{background-image: url("../../img/backgrounds/ROLL_BACK_SYUSYOU01.png");}
