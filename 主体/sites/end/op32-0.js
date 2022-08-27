@@ -21,11 +21,4 @@ var op =
 
     "bigpos":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none",]
 };
-function MusicPlayer() {
-	var music=document.getElementById("music");
-	music.play();
-    music.loop=false;
-    music.preload=true;
-    music.volume=1;
-}
 
