@@ -16,8 +16,3 @@ var op =
 
     "bigpos":["right","right","right",]
 };
-function MusicPlayer() {
-	var music=document.getElementById("music");
-	var status=1;
-	music.play();
-}
