@@ -118,4 +118,3 @@ function Save(GameName,GameAddress){
 function Return(){
     window.open('../../../登录/login.html');
 }
-

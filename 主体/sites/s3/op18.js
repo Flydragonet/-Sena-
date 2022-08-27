@@ -13,7 +13,7 @@ var op =
 
     "big":["ST01C_D091","ST01C_D091","ST01C_D091","none"],
 
-    "bigpos":["middle","middle","middle","none"]
+    "bigpos":["middle","middle","middle","middle"]
 };
 function MusicPlayer() {
 	var music=document.getElementById("music");
