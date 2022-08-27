@@ -8,8 +8,8 @@
         <script src="../../js/jquery-3.6.0.js"></script>
         <script src="op11.js"></script>
         <script src="../../js/gamecontroll.js"></script>
-        <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3"><!--背景音乐文件-->
-        </audio>
+        <audio id="music" src = 'music1.mp3' ></audio>
+        <audio id="music2" src = 'music3.mp3' ></audio>
         
         <script>
             window.onclick = function(){
@@ -22,8 +22,8 @@
     </head>
 
     <body>
-        <div id = "dialog"  onclick="next_move()"></div>
-        <div id = "text-box"  onclick="next_move()">
+        <div id = "dialog"  onclick="{ MusicPlayer(); next_move();}"></div>
+        <div id = "text-box"  onclick="{ MusicPlayer(); next_move();}">
             <p id="name"></p>
             <p id="texts"></p>
         </div>
