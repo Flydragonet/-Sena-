@@ -118,3 +118,19 @@ function Save(GameName,GameAddress){
 function Return(){
     window.open('../../../登录/login.html');
 }
+
+//鼠标点击音效
+function MusicPlayer() {//对话框音效
+	var music=document.getElementById("music");
+	music.play();
+    music.loop=false;
+    music.preload=true;
+    music.volume=1;
+}
+function MusicPlayer2() {//选择分支音效
+	var music=document.getElementById("music2");
+	music.play();
+    music.loop=false;
+    music.preload=true;
+    music.volume=1;
+}
