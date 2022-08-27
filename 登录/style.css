@@ -10,7 +10,9 @@
 /* 使用flex布局，让内容垂直和水平居中 */
 body{
     background-image: url("background.png");
-    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
  }
 section {
     /* 相对定位 */
