@@ -2,12 +2,63 @@
 <html>
     <head>
         <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+        <style>
+             @import url("../css/fonts.css");
+            *{margin: 0;padding: 0;}
+            body{
+                background-image: url("../../登录/background.png");
+                background-size: 100% 100%;
+            }
+            section {
+                /* 相对定位 */
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                /*background-image: url('C:\Users\hp\Desktop\登录\img\2.png');*/
+            }
+            .container {
+                position: relative;
+                width: 400px;
+                min-height: 400px;
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(5px);
+                text-align: center;
+                padding: 30px;
+                box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            #start
+            {
+                text-decoration:underline;
+                font-size: 40px;
+                font-weight: 600;
+                color: white;
+                font-family: 方正清刻本悦宋简体;
+                text-shadow: 2px 2px 5px black;
+                line-height: 65px;
+            }
+            #tip
+            {
+                font-size: 20px;
+                color: white;
+                font-family: 方正清刻本悦宋简体;
+                text-shadow: 2px 2px 5px black;
+                line-height: 30px;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
 
-        <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/flower.mp3" volume="1.0"></audio>
-        <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src=".mp3" volume="1.0"></audio>
+        <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/mute.mp3" volume="1.0"></audio>
+        <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/mute.mp3" volume="1.0"></audio>
         <script>
             var nowplay, num = 0;
-            setInterval(function(){
+            function musicplay(){
+                setInterval(function(){
                 if (nowplay != window.localStorage.nowbgm)
                 {
                     nowplay = window.localStorage.nowbgm;
@@ -16,11 +67,17 @@
                     document.getElementById("music" + num).src = "../../素材/音乐/" + window.localStorage.nowbgm + ".mp3";
                     $("#music" + num).animate({volume:"1.0"}, 2000);
                 }
-            }, 1000);
+                }, 1000);
+            }
         </script>
     </head>
     <body>
-        <button type="button" onclick="window.localStorage.nowbgm = 'flower'">播放</button>
-        <button type="button" onclick="musicout()">渐出</button>
+        <section>
+            <div class="container">
+                <h1 id="tip">该页面是音频播放页面，请在游玩过程中不要关闭该标签页，点击下方“播放”即可返回登陆标签页进行游戏</h1>
+                <img src="../../登录/disc.gif" width="300px" height="300px">
+                <h1 onclick="musicplay()" id="start">播放</h1>
+            </div>
+        </section>
     </body>
 </html>
