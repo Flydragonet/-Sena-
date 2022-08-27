@@ -1,12 +1,12 @@
 var op = 
 {   "type":0,
 
-    "nextpage":"../../登录/menu.html",
+    "nextpage":"end/page_11.html",
 
     "steps":1,
     
     "name":["旁白"],
-    "texts":["你达成了特殊结局"],
+    "texts":["你收到了Sena酱的微信消息"],
     
     "small":["none"],
 
