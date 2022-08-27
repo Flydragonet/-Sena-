@@ -16,11 +16,13 @@
             body{background-image: url("../../../素材/背景/ETC_BK015D.png");}
             #selection_box{display: none;}
         </style>
+        <audio id="music" src = '' ></audio>
+        <audio id="music2" src = '' ></audio>
     </head>
 
     <body>
-        <div id = "dialog"  onclick="next_move()"></div>
-        <div id = "text-box"  onclick="next_move()">
+        <div id = "dialog"  onclick="{ MusicPlayer(); next_move();}"></div>
+        <div id = "text-box"  onclick="{ MusicPlayer(); next_move();}">
             <p id="name"></p>
             <p id="texts"></p>
         </div>
@@ -39,9 +41,9 @@
         </div>
 
         <div id="selection_box">
-            <p><input type="button" value="你太瘦了，还是得多吃点" class="selection" id="option1" onclick="goto('page_25-1.html')"></p>
-            <p><input type="button" value="哈哈，学校食堂的菜比这更油" class="selection" id="option2" onclick="goto('page_25-2.html')"></p>
-            <p><input type="button" value="开学以后马上就冬天嘞，穿的多不怕胖，哈哈哈" class="selection" id="option3" onclick="goto('page_25-3.html')"></p>
+            <p><input type="button" value="你太瘦了，还是得多吃点" class="selection" id="option1" onclick="{ MusicPlayer2(); goto('page_25-1.html'); }"></p>
+            <p><input type="button" value="哈哈，学校食堂的菜比这更油" class="selection" id="option2" onclick="{ MusicPlayer2(); goto('page_25-2.html'); }"></p>
+            <p><input type="button" value="开学以后马上就冬天嘞，穿的多不怕胖，哈哈哈" class="selection" id="option3" onclick="{ MusicPlayer2(); goto('page_25-3.html'); }"></p>
         </div>
 
         <div id = "menu">
