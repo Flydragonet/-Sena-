@@ -1,18 +1,18 @@
 var op =
 {
-    "type" : 0,
+    "type": 0,
     "nextpage": "../../登录/menu.html",
 
     "steps": 1,
 
-        "name": ["旁白"],
-            "texts": ["你达成了特殊结局"],
+    "name": ["旁白"],
+    "texts": ["你达成了特殊结局"],
 
-                "small": ["none"],
+    "small": ["none"],
 
-                    "big": ["none"],
+    "big": ["none"],
 
-                        "bigpos": ["none"]
+    "bigpos": ["none"]
 };
 function MusicPlayer() {
     var music = document.getElementById("music");
