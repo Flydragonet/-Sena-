@@ -21,7 +21,7 @@ array[index].achi1 = 1;
 alert("达成结局成就“网瘾少年”");
 array[index].achi8 = array[index].achi8 + 1;
 if (array[index].achi8 == 4) {
-    alert("达成全结局成就");
+    /*alert("达成全结局成就");*/
 }
 window.localStorage.userArr = JSON.stringify(array);
 
