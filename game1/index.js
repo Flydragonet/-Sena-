@@ -561,10 +561,16 @@
 					}
 					else {
 						totalScore = 2;
+						var index = window.localStorage.userid;
+						var array = JSON.parse(window.localStorage.userArr);
+
 					}
 					var index = window.localStorage.userid;
 					var array = JSON.parse(window.localStorage.userArr);
 					array[index].likability = array[index].likability + totalScore;
+					array[index].achi5 = 1;
+					window.localStorage.userArr = JSON.stringify(array);
+					alert("获得成就“镀金的勇者”")
 					alert("好感度增加" + totalScore + "当前好感度是：" + array[index].likability);
 					window.localStorage.userArr = JSON.stringify(array);
 					var url = "../主体/sites/s6/page_27-1.html";
