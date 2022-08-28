@@ -14,7 +14,6 @@
     <script>
         window.localStorage.nowbgm = "everyday";
     </script>
-
     <style>
         body {
             background-image: url("../../../素材/背景/EV101A.png");
@@ -24,11 +23,13 @@
             display: none;
         }
     </style>
+    <audio id="music" src=''></audio>
+    <audio id="music2" src=''></audio>
 </head>
 
 <body>
-    <div id="dialog" onclick="next_move()"></div>
-    <div id="text-box" onclick="next_move()">
+    <div id="dialog" onclick="{ MusicPlayer(); next_move();}"></div>
+    <div id="text-box" onclick="{ MusicPlayer(); next_move();}">
         <p id="name"></p>
         <p id="texts"></p>
     </div>
@@ -47,11 +48,12 @@
     </div>
 
     <div id="selection_box">
-        <p><input type="button" value="不堵就不是北京了哈哈" class="selection" id="option1" onclick="goto('page_5.html')"></p>
+        <p><input type="button" value="不堵就不是北京了哈哈" class="selection" id="option1"
+                onclick="{ MusicPlayer2(); goto('page_5.html'); }"></p>
         <p><input type="button" value="没关系，你来多晚我都等你" class="selection" id="option2"
-                onclick="reduceLikability();goto('page_6.html')"></p>
+                onclick="{ reduceLikability();MusicPlayer2(); goto('page_6.html'); }"></p>
         <p><input type="button" value="哈哈，等你的这段时间正好背背单词" class="selection" id="option3"
-                onclick="addLikability();goto('page_7.html')"></p>
+                onclick="{addLikability(); MusicPlayer2(); goto('page_7.html'); }"></p>
     </div>
 
     <div id="menu">

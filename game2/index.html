@@ -28,8 +28,6 @@
 	}
 
 
-
-
 	.head h2 {
 		display: inline-block;
 		width: 50%;
@@ -44,7 +42,12 @@
 	}
 
 	.head input {
-		padding: 1px 3px;
+		padding: 5px 10px;
+	}
+
+	.head input:hover{
+		background-color: royalblue;
+		color: white;
 	}
 
 	.wrap {
@@ -64,13 +67,16 @@
 		border: 1px solid rgb(234, 229, 229);
 		position: absolute;
 		top: -1px;
-		right: 100%
+		right: 100%;
+		background-color: rgba(255, 255, 255, 0.5);
 	}
 
 	.side p {
-		padding: 0px 15px;
+		margin: 0px 10px;
+		padding: 0px 5px;
 		line-height: 25px;
 		font-size: 16px;
+		background-color: antiquewhite;
 	}
 
 	.side p:nth-of-type(1) {
@@ -201,14 +207,14 @@
 		<h1 style="color: rgb(6, 6, 6);">你有多快？</h1>
 		<br>
 		<h2 style="color: rgb(109, 235, 66);">游戏说明：点击“开始游戏”，随机掉下QQ表情，点中它，千万别让它掉下去！！</h2>
-		<h1 style="color: rgb(226, 226, 224);"><input type="button" value="开始游戏" /></h1>
+		<h1 style="color: rgb(226, 226, 224);"><input id="startgame" type="button" value="开始游戏" /></h1>
 		<img src="../素材/大立绘/ST01C_B030.png" alt="" class="sena">
 		<img src="../素材/效果/SYM_NIKO.png" alt="" class="emo">
 	</div>
 	<div id="box" class="wrap">
 		<div class="side">
-			<p style="color:rgb(96, 241, 244);">得分：<b style="color:rgb(96, 241, 244);">0</b> 分</p>
-			<p style="color:red;">失分：<b style="color:red;">0</b> 分</p>
+			<p style="color:rgb(55, 173, 246);"><b style="color:rgb(55, 173, 246);">得分：0分</b> </p>
+			<p style="color:red;"><b style="color:red;">失分：0分</b> </p>
 		</div>
 		<div class="main"></div>
 	</div>

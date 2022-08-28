@@ -6,19 +6,16 @@
         <link rel="shortcut icon" href="../../../素材/小立绘/FA01A_D020.png"/>
         <link rel="stylesheet" href="../../css/gamepage.css" />
         <script src="../../js/jquery-3.6.0.js"></script>
-        <script src="op2-1.js"></script>
+        <script src="op11-0.js"></script>
         <script src="../../js/gamecontroll.js"></script>
-
-	    <!--当前界面的bgm-->
+        <!--当前界面的bgm-->
         <script>
-            window.localStorage.nowbgm = "morning";
+            window.localStorage.nowbgm = "mute";
         </script>
-
-
         <style>
-            body{background-image: url("../../../素材/背景/ETC_BK023D.png");}
+            body{background-image: url("../../../素材/背景/ETC_BK023NN.png");}
         </style>
-	<audio id="music" src = '' ></audio>
+        <audio id="music" src = '' ></audio>
         <audio id="music2" src = '' ></audio>
     </head>
 
@@ -43,10 +40,9 @@
         </div>
         
         <div id = "menu">
-            <button class = op onClick="Return()">RETURN</button>&nbsp;&nbsp;
-            <button class = op onClick="Save('场景1第2.1页','../主体/sites/s1/page_2-1')">SAVE</button>&nbsp;&nbsp;
+            <button class = op onclick="Return()">RETURN</button>&nbsp;&nbsp;
+            <button class = op>SAVE</button>&nbsp;&nbsp;
             <button class = op>CONFIG</button>&nbsp;&nbsp;
         </div>
-		
     </body>
 </html>

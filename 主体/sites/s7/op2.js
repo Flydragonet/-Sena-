@@ -21,8 +21,3 @@ var op =
 
     "bigpos":["none","none","none","none","none","none","none","none","none","none","none","none","none","none",]
 };
-function MusicPlayer() {
-	var music=document.getElementById("music");
-	var status=1;
-	music.play();
-}

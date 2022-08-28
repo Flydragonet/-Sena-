@@ -120,6 +120,21 @@ function Return() {
     window.open('../../../登录/login.html');
 }
 
+function MusicPlayer() {//对话框音效
+    var music = document.getElementById("music");
+    music.play();
+    music.loop = false;
+    music.preload = true;
+    music.volume = 1;
+}
+function MusicPlayer2() {//选择分支音效
+    var music = document.getElementById("music2");
+    music.play();
+    music.loop = false;
+    music.preload = true;
+    music.volume = 1;
+}
+//好感度控制
 function addLikability() {
     var index = window.localStorage.userid;
     var array = JSON.parse(window.localStorage.userArr);
@@ -148,3 +163,7 @@ function reduceLikability2() {
     alert("好感度-2，当前好感度是：" + array[index].likability);
     window.localStorage.userArr = JSON.stringify(array);
 }
+
+//鼠标点击音效
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+</html>
 
 <head>
     <meta charset="utf-8" />
@@ -9,25 +10,23 @@
     <script src="../../js/jquery-3.6.0.js"></script>
     <script src="op11.js"></script>
     <script src="../../js/gamecontroll.js"></script>
-    <audio id="music" autoplay="autoplay" loop="loop" preload="preload" src=".mp3">
-        <!--背景音乐文件-->
-    </audio>
+    <audio id="music" src=''></audio>
+    <audio id="music2" src=''></audio>
 
+    <!--当前界面的bgm-->
     <script>
-        window.onclick = function () {
-            MusicPlayer();
-        }
+        window.localStorage.nowbgm = "mute";
     </script>
     <style>
         body {
-            background-image: url("../../img/backgrounds/EV119B.png");
+            background-image: url("../../../素材/背景/ENDING.png");
         }
     </style>
 </head>
 
 <body>
-    <div id="dialog" onclick="next_move()"></div>
-    <div id="text-box" onclick="next_move()">
+    <div id="dialog" onclick="{ MusicPlayer(); next_move();}"></div>
+    <div id="text-box" onclick="{ MusicPlayer(); next_move();}">
         <p id="name"></p>
         <p id="texts"></p>
     </div>

@@ -16,11 +16,13 @@
         <style>
             body{background-image: url("../../../素材/背景/ETC_BK018D.png");}
         </style>
+        <audio id="music" src = '' ></audio>
+        <audio id="music2" src = '' ></audio>
     </head>
 
     <body>
-        <div id = "dialog"  onclick="next_move()"></div>
-        <div id = "text-box"  onclick="next_move()">
+        <div id = "dialog"  onclick="{ MusicPlayer(); next_move();}"></div>
+        <div id = "text-box"  onclick="{ MusicPlayer(); next_move();}">
             <p id="name"></p>
             <p id="texts"></p>
         </div>

@@ -1,13 +1,12 @@
 var op = 
 {   "type":0,
-    
-    "nextpage":"s4/page_21.html",
-    
+
+    "nextpage":"end/page_11.html",
+
     "steps":1,
     
     "name":["旁白"],
-    
-    "texts":["两人出发去附近的商业街"],
+    "texts":["你收到了Sena酱的微信消息"],
     
     "small":["none"],
 
@@ -15,4 +14,3 @@ var op =
 
     "bigpos":["none"]
 };
-

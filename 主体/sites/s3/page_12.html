@@ -22,11 +22,15 @@
             display: none;
         }
     </style>
+    <audio id="music" src=''></audio>
+    <audio id="music2" src=''></audio>
+
 </head>
 
+
 <body>
-    <div id="dialog" onclick="next_move()"></div>
-    <div id="text-box" onclick="next_move()">
+    <div id="dialog" onclick="{ MusicPlayer(); next_move();}"></div>
+    <div id="text-box" onclick="{ MusicPlayer(); next_move();}">
         <p id="name"></p>
         <p id="texts"></p>
     </div>
@@ -45,19 +49,19 @@
     </div>
 
     <div id="selection_box">
-        <p><input type="button" value="她明明很卷，但老是说自己卷不动" class="selection" id="option1" onclick="goto('page_13.html')">
-        </p>
+        <p><input type="button" value="她明明很卷，但老是说自己卷不动" class="selection" id="option1"
+                onclick="{ MusicPlayer2(); goto('page_13.html'); }"></p>
         <p><input type="button" value="没什么看法" class="selection" id="option2"
-                onclick="reduceLikability();goto('page_14.html')"></p>
+                onclick="{ MusicPlayer2();reduceLikability(); goto('page_14.html'); }"></p>
         <p><input type="button" value="长得挺漂亮，性格也不错" class="selection" id="option3"
-                onclick="reduceLikability();goto('page_15.html')"></p>
-    </div>
+                onclick="{ MusicPlayer2();reduceLikability(); goto('page_15.html'); }"></p>
 
-    <div id="menu">
-        <button class=op onclick="Return()">RETURN</button>&nbsp;&nbsp;
-        <button class=op onClick="Save('场景3第12页','../主体/sites/s3/page_12')">SAVE</button>&nbsp;&nbsp;
-        <button class=op>CONFIG</button>&nbsp;&nbsp;
-    </div>
+
+        <div id="menu">
+            <button class=op onclick="Return()">RETURN</button>&nbsp;&nbsp;
+            <button class=op onClick="Save('场景3第12页','../主体/sites/s3/page_12')">SAVE</button>&nbsp;&nbsp;
+            <button class=op>CONFIG</button>&nbsp;&nbsp;
+        </div>
 </body>
 
 </html>

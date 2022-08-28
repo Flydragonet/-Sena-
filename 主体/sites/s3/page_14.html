@@ -16,11 +16,13 @@
         <style>
             body{background-image: url("../../../素材/背景/ETC_BK017D.png");}
         </style>
+        <audio id="music" src = '' ></audio>
+        <audio id="music2" src = '' ></audio>
     </head>
 
     <body>
-        <div id = "dialog"  onclick="next_move()"></div>
-        <div id = "text-box"  onclick="next_move()">
+        <div id = "dialog"  onclick="{ MusicPlayer(); next_move();}"></div>
+        <div id = "text-box"  onclick="{ MusicPlayer(); next_move();}">
             <p id="name"></p>
             <p id="texts"></p>
         </div>
@@ -40,7 +42,7 @@
         
         <div id = "menu">
             <button class = op onclick="Return()">RETURN</button>&nbsp;&nbsp;
-            <button class = op onClick="Save('场景3第12页','../主体/sites/s3/page_12')">SAVE</button>&nbsp;&nbsp;
+            <button class = op onClick="Save('场景3第14页','../主体/sites/s3/page_14')">SAVE</button>&nbsp;&nbsp;
             <button class = op>CONFIG</button>&nbsp;&nbsp;
         </div>
 
