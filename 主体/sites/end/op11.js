@@ -14,6 +14,14 @@ var op =
 
     "bigpos": ["none"]
 };
+
+var index = window.localStorage.userid;
+var array = JSON.parse(window.localStorage.userArr);
+array[index].achi1 = 1;
+alert("达成结局成就“网瘾少年”");
+window.localStorage.userArr = JSON.stringify(array);
+
+
 function MusicPlayer() {
     var music = document.getElementById("music");
     var status = 1;

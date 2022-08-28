@@ -164,6 +164,5 @@ function reduceLikability2() {
     window.localStorage.userArr = JSON.stringify(array);
 }
 
-//鼠标点击音效
 
 
