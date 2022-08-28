@@ -27,6 +27,10 @@ var index = window.localStorage.userid;
 var array = JSON.parse(window.localStorage.userArr);
 array[index].achi2 = 1;
 alert("达成结局成就“人生赢家”");
+array[index].achi8 = array[index].achi8 + 1;
+if (array[index].achi8 == 4) {
+    alert("达成全结局成就");
+}
 window.localStorage.userArr = JSON.stringify(array);
 
 

@@ -571,8 +571,12 @@
 					if (totalScore == 2) {
 						array[index].achi5 = 1;
 						alert("获得成就“镀金的勇者”")
-					} 
-					
+					}
+					if (totalScore == -1) {
+						array[index].achi7 = array[index].achi7 + 1;
+						alert("隐藏成就进度")
+					}
+
 					alert("好感度增加" + totalScore + "当前好感度是：" + array[index].likability);
 					window.localStorage.userArr = JSON.stringify(array);
 					var url = "../主体/sites/s6/page_27-1.html";

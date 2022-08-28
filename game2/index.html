@@ -45,7 +45,7 @@
 		padding: 5px 10px;
 	}
 
-	.head input:hover{
+	.head input:hover {
 		background-color: royalblue;
 		color: white;
 	}
@@ -68,7 +68,7 @@
 		position: absolute;
 		top: -1px;
 		right: 100%;
-		background-color: rgba(255, 255, 255, 0.5);
+		/*background-color: rgba(255, 255, 255, 0.5);*/
 	}
 
 	.side p {
@@ -76,7 +76,6 @@
 		padding: 0px 5px;
 		line-height: 25px;
 		font-size: 16px;
-		background-color: antiquewhite;
 	}
 
 	.side p:nth-of-type(1) {
@@ -181,6 +180,13 @@
 						array[index].achi6 = 1;
 						alert("获得成就“身手敏捷”")
 					}
+					if (totalScore2 == -2) {
+						array[index].achi7 = array[index].achi7 + 1;
+						alert("隐藏成就进度")
+						if (array[index].achi7 == 2) {
+							alert("达成隐藏成就“进击的鶸”");
+						}
+					}
 					alert("好感度增加" + totalScore2 + "当前好感度是：" + array[index].likability);
 					window.localStorage.userArr = JSON.stringify(array);
 					//alert('游戏结束,好感度+' + likability);
@@ -217,8 +223,8 @@
 	</div>
 	<div id="box" class="wrap">
 		<div class="side">
-			<p style="color:rgb(55, 173, 246);"><b style="color:rgb(55, 173, 246);">得分：0分</b> </p>
-			<p style="color:red;"><b style="color:red;">失分：0分</b> </p>
+			<p style="color:rgb(89, 246, 220);">得分：<b style="color:rgb(89, 246, 220);">0</b> 分</p>
+			<p style="color:red;">失分：<b style="color:red;">0</b> 分</p>
 		</div>
 		<div class="main"></div>
 	</div>
