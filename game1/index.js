@@ -546,20 +546,27 @@
 				case 13: //回车
 				case 32: //空格
 					var _SCORE2 = _SCORE + 50 * Math.max(_LIFE - 1, 0);
-					var likability = 0;
+					var totalScore = 0;
 
 					if (_SCORE < 50) {
-						likability = -1;
+						totalScore = -1;
+
 					}
 					else if (_SCORE >= 50 && _SCORE < 150) {
-						likability = 1;
+						totalScore = 0;
 					}
 					else if (_SCORE >= 150 && _SCORE < 250) {
-						likability = 2;
+						totalScore = 1;
+
 					}
 					else {
-						likability = 3;
+						totalScore = 2;
 					}
+					var index = window.localStorage.userid;
+					var array = JSON.parse(window.localStorage.userArr);
+					array[index].likability = array[index].likability + totalScore;
+					alert("好感度增加" + totalScore + "当前好感度是：" + array[index].likability);
+					window.localStorage.userArr = JSON.stringify(array);
 					var url = "../主体/sites/s6/page_27-1.html";
 					window.location.href = url;
 			}

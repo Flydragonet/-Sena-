@@ -151,23 +151,28 @@
 				if (b == 50 || t == 10) {
 
 					var _SCORE = b - t;
-					var likability = 0;
+					var totalScore2 = 0;
 
 					if (_SCORE < 0) {
-						likability = -1;
+						totalScore2 = -2;
 					}
 					else if (_SCORE >= 0 && _SCORE < 10) {
-						likability = 0;
+						totalScore2 = -1;
 					}
 					else if (_SCORE >= 10 && _SCORE < 20) {
-						likability = 1;
+						totalScore2 = 0;
 					}
 					else if (_SCORE >= 20 && _SCORE < 35) {
-						likability = 2;
+						totalScore2 = 1;
 					}
 					else {
-						likability = 3;
+						totalScore2 = 2;
 					}
+					var index = window.localStorage.userid;
+					var array = JSON.parse(window.localStorage.userArr);
+					array[index].likability = array[index].likability + totalScore2;
+					alert("好感度增加" + totalScore2 + "当前好感度是：" + array[index].likability);
+					window.localStorage.userArr = JSON.stringify(array);
 					//alert('游戏结束,好感度+' + likability);
 					var url = "../主体/sites/s6/page_28.html";
 					window.location.href = url;

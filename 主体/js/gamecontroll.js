@@ -6,37 +6,37 @@ var page_type = op.type;//场景类型：0为自动跳转，1为分支选择，2
 var click = 0;//当前点击次数
 
 //显示对话函数
-function next_text(){
+function next_text() {
     $("#texts").hide();
     $("#name").hide();
-    if(op.name[click]!="旁白"){
+    if (op.name[click] != "旁白") {
         document.getElementById("name").innerHTML = "【" + op.name[click] + "】";
     }
-    else{
+    else {
         document.getElementById("name").innerHTML = "<br>";
     }
-    document.getElementById("texts").innerHTML =  op.texts[click];
+    document.getElementById("texts").innerHTML = op.texts[click];
     $("#texts").fadeIn();
     $("#name").fadeIn();
     return;
 }
 
 //显示小立绘
-function next_small(){
-    if(click==0){
-        if(op.small[click]!="none"){
-            document.getElementById("small_pic").src="../../../素材/小立绘/"+op.small[click]+".png";
+function next_small() {
+    if (click == 0) {
+        if (op.small[click] != "none") {
+            document.getElementById("small_pic").src = "../../../素材/小立绘/" + op.small[click] + ".png";
             $("#small_pic").fadeIn();
         }
     }
-    else{
-        if(op.small[click-1]!=op.small[click]){
+    else {
+        if (op.small[click - 1] != op.small[click]) {
             $("#small_pic").hide();
-            if(op.small[click]=="none"){
-                document.getElementById("small_pic").src="../../../素材/小立绘/transparrent.png";
+            if (op.small[click] == "none") {
+                document.getElementById("small_pic").src = "../../../素材/小立绘/transparrent.png";
             }
-            else{
-                document.getElementById("small_pic").src="../../../素材/小立绘/"+op.small[click]+".png";
+            else {
+                document.getElementById("small_pic").src = "../../../素材/小立绘/" + op.small[click] + ".png";
             }
             $("#small_pic").fadeIn();
         }
@@ -45,21 +45,21 @@ function next_small(){
 }
 
 //显示大立绘
-function next_big(){
-    if(click==0){
-        if(op.big[click]!="none"){
-            document.getElementById(op.bigpos[click]).src="../../../素材/大立绘/"+op.big[click]+".png";
+function next_big() {
+    if (click == 0) {
+        if (op.big[click] != "none") {
+            document.getElementById(op.bigpos[click]).src = "../../../素材/大立绘/" + op.big[click] + ".png";
             $(op.bigpos[click]).fadeIn();
         }
     }
-    else{
-        if(op.bigpos[click]!=op.bigpos[click-1] || op.big[click]!=op.big[click-1]){
-            $(op.bigpos[click-1]).hide();
-            if(op.big[click]=="none"){
-                document.getElementById(op.bigpos[click]).src="../../../素材/大立绘/transparrent.png";
+    else {
+        if (op.bigpos[click] != op.bigpos[click - 1] || op.big[click] != op.big[click - 1]) {
+            $(op.bigpos[click - 1]).hide();
+            if (op.big[click] == "none") {
+                document.getElementById(op.bigpos[click]).src = "../../../素材/大立绘/transparrent.png";
             }
-            else{
-                document.getElementById(op.bigpos[click]).src="../../../素材/大立绘/"+op.big[click]+".png";
+            else {
+                document.getElementById(op.bigpos[click]).src = "../../../素材/大立绘/" + op.big[click] + ".png";
             }
             $(op.bigpos[click]).fadeIn();
         }
@@ -68,46 +68,47 @@ function next_big(){
 }
 
 //跳转指定页面
-function goto(apage){
-    $("body").fadeOut(1000,function(){window.location.replace(apage);})
+function goto(apage) {
+    $("body").fadeOut(1000, function () { window.location.replace(apage); })
 };
 
 //总控函数
-function next_move(){
+function next_move(ending) {
     //如果当前未到该页面结束，执行一系列动画
-    if(click<count){
-       next_text();
-       next_small();
-       next_big();
-       click++;
+    if (click < count) {
+        next_text();
+        next_small();
+        next_big();
+        click++;
     }
-    else{//本页面已结束
-        switch(page_type){
+    else {//本页面已结束
+        switch (page_type) {
             case 0://自动跳转
-                goto("../"+pagename);
+                goto("../" + pagename);
                 break;
             case 1://分支选择框出现
                 $("#selection_box").fadeIn();
                 break;
             case 2:
+
         }
     }
 };
 
 //保存函数
-function Save(GameName,GameAddress){
+function Save(GameName, GameAddress) {
     // if(window.localStorage.userid){
-        var index = window.localStorage.userid;
-        if(index == -1 || index == undefined){
-            alert("未能确定当前用户状态，保存失败")
-            return;
-        }
-        var array = JSON.parse(window.localStorage.userArr);
-        alert(array[index].username);
-        array[index].GameName = GameName;
-        array[index].GameAddress = GameAddress;
-        window.localStorage.userArr=JSON.stringify(array);
-        alert(GameName + "保存成功");
+    var index = window.localStorage.userid;
+    if (index == -1 || index == undefined) {
+        alert("未能确定当前用户状态，保存失败")
+        return;
+    }
+    var array = JSON.parse(window.localStorage.userArr);
+    alert(array[index].username);
+    array[index].GameName = GameName;
+    array[index].GameAddress = GameAddress;
+    window.localStorage.userArr = JSON.stringify(array);
+    alert(GameName + "保存成功");
     // }
     // else{
     //     throw("无法保存进度: userid missing"); // error
@@ -115,6 +116,35 @@ function Save(GameName,GameAddress){
 }
 
 //返回主页
-function Return(){
+function Return() {
     window.open('../../../登录/login.html');
+}
+
+function addLikability() {
+    var index = window.localStorage.userid;
+    var array = JSON.parse(window.localStorage.userArr);
+    array[index].likability = array[index].likability + 1;
+    alert("好感度+1，当前好感度是：" + array[index].likability);
+    window.localStorage.userArr = JSON.stringify(array);
+}
+function addLikability2() {
+    var index = window.localStorage.userid;
+    var array = JSON.parse(window.localStorage.userArr);
+    array[index].likability = array[index].likability + 2;
+    alert("好感度+2，当前好感度是：" + array[index].likability);
+    window.localStorage.userArr = JSON.stringify(array);
+}
+function reduceLikability() {
+    var index = window.localStorage.userid;
+    var array = JSON.parse(window.localStorage.userArr);
+    array[index].likability = array[index].likability - 1;
+    alert("好感度-1，当前好感度是：" + array[index].likability);
+    window.localStorage.userArr = JSON.stringify(array);
+}
+function reduceLikability2() {
+    var index = window.localStorage.userid;
+    var array = JSON.parse(window.localStorage.userArr);
+    array[index].likability = array[index].likability - 2;
+    alert("好感度-2，当前好感度是：" + array[index].likability);
+    window.localStorage.userArr = JSON.stringify(array);
 }

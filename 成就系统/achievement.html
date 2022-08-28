@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>成就界面</title>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../素材/小立绘/FA01A_D020.png"/>
+    <link rel="shortcut icon" href="../素材/小立绘/FA01A_D020.png" />
     <link rel="stylesheet" href="./style.css">
     <style></style>
     <title>Achievement</title>
@@ -16,65 +17,67 @@
         <header class="htmleaf-header">
             <h1 style="color: white;">Achievement</h1>
             <div class="htmleaf-links">
-                <a class="htmleaf-icon icon-htmleaf-home-outline" onclick="window.open('../登录/menu.html', '_self')" title="返回首页" target="_blank"><span>
+                <a class="htmleaf-icon icon-htmleaf-home-outline" onclick="window.open('../登录/menu.html', '_self')"
+                    title="返回首页" target="_blank"><span>
                         返回主页</span></a>
-                <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" onclick="window.open('../登录/menu.html', '_self')" title="返回上一页"
-                    target="_blank"><span> 返回上一页</span></a>
+                <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+                    onclick="window.open('../登录/menu.html', '_self')" title="返回上一页" target="_blank"><span>
+                        返回上一页</span></a>
             </div>
         </header>
         <script>
             window.onload = function () {
-                var i = localStorage.getItem('achieve1');
-                if (i == '1') {
+                var i = localStorage.getItem('achi1');
+                if (i == 1) {
                     var tmp = document.getElementById('1');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p11').innerHTML = "获得好人卡";
                     document.getElementById('p12').innerHTML = "友谊地久天长"
                 }
-                var i = localStorage.getItem('achieve2');
-                if (i == '1') {
+                var i = localStorage.getItem('achi2');
+                if (i == 1) {
                     var tmp = document.getElementById('2');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p21').innerHTML = "形单影只";
                     document.getElementById('p22').innerHTML = "命中注定"
                 }
-                var i = localStorage.getItem('achieve3');
-                if (i == '1') {
+                var i = localStorage.getItem('achi3');
+                if (i == 1) {
                     var tmp = document.getElementById('3');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p31').innerHTML = "特立独行";
                     document.getElementById('p32').innerHTML = "快乐不止于恋爱"
                 }
-                var i = localStorage.getItem('achieve4');
-                if (i == '1') {
+                var i = localStorage.getItem('achi4');
+                if (i == 1) {
                     var tmp = document.getElementById('4');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p41').innerHTML = "双人成行";
                     document.getElementById('p42').innerHTML = "生活可以有点甜"
                 }
-                var i = localStorage.getItem('achieve5');
-                if (i == '1') {
+                var i = localStorage.getItem('achi5');
+                if (i == 1) {
                     var tmp = document.getElementById('5');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p51').innerHTML = "战力拉满";
                     document.getElementById('p52').innerHTML = "操作细致"
                 }
-                var i = localStorage.getItem('achieve6');
-                if (i == '1') {
+                var i = localStorage.getItem('achi6');
+                if (i == 1) {
                     var tmp = document.getElementById('6');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p61').innerHTML = "眼疾手快";
                     document.getElementById('p62').innerHTML = "游刃有余"
                 }
-                var i = localStorage.getItem('achieve7');
-                if (i == '1') {
+                var i = localStorage.getItem('achi7');
+                if (i == 1) {
                     var tmp = document.getElementById('7');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p71').innerHTML = "头铁";
                     document.getElementById('p72').innerHTML = "菜是原罪"
                 }
-                var i = localStorage.getItem('achieve8');
-                if (i == '1') {
+                var i = localStorage.getItem('achi8');
+                if (i == 1) {
                     var tmp = document.getElementById('8');
                     tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(1); filter: grayscale(0);');
                     document.getElementById('p81').innerHTML = "洞察一切";
@@ -85,10 +88,10 @@
         <div class="cols">
             <div id=1 class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A010.png)">
+                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A100.png)">
                         <div class="inner">
                             <p id=p11>locked</p>
-                            <span>你是个好人</span>
+                            <span>网瘾少年</span>
                         </div>
                     </div>
                     <div class="back">
@@ -100,10 +103,10 @@
             </div>
             <div id=2 class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A130.png)">
+                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A030.png)">
                         <div class="inner">
                             <p id=p21>locked</p>
-                            <span>实力单身</span>
+                            <span>人生赢家</span>
                         </div>
                     </div>
                     <div class="back">
@@ -115,10 +118,10 @@
             </div>
             <div id=3 class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A100.png)">
+                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A010.png)">
                         <div class="inner">
                             <p id=p31>locked</p>
-                            <span>网瘾少年</span>
+                            <span>你是个好人</span>
                         </div>
                     </div>
                     <div class="back">
@@ -130,10 +133,10 @@
             </div>
             <div id=4 class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A030.png)">
+                    <div class="front" style="background-image: url(../素材/小立绘/FA01A_A130.png)">
                         <div class="inner">
                             <p id=p41>locked</p>
-                            <span>人生赢家</span>
+                            <span>实力单身</span>
                         </div>
                     </div>
                     <div class="back">
