@@ -12,7 +12,7 @@ var op =
     
     "small":["FA01B_A090","FA01B_A090","FA01B_A090",],
 
-    "big":["ST01C_D130","ST01C_D130","ST01C_D130",],
+    "big":["ST01C_D111","ST01C_D111","ST01C_D111",],
 
     "bigpos":["left","left","left"]
 };
