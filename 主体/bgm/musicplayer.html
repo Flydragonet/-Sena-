@@ -7,7 +7,9 @@
             *{margin: 0;padding: 0;}
             body{
                 background-image: url("../../登录/background.png");
-                background-size: 100% 100%;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
             }
             section {
                 /* 相对定位 */
@@ -41,6 +43,16 @@
                 font-family: 方正清刻本悦宋简体;
                 text-shadow: 2px 2px 5px black;
                 line-height: 65px;
+                padding: 15px;
+
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+            }
+            #start:hover{
+                background-color: rgba(0, 0, 0, 0.45);
+                box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+                transform: translateY(-5px);
             }
             #tip
             {
@@ -76,7 +88,7 @@
             <div class="container">
                 <h1 id="tip">该页面是音频播放页面，请在游玩过程中不要关闭该标签页，点击下方“播放”即可返回登陆标签页进行游戏</h1>
                 <img src="../../登录/disc.gif" width="300px" height="300px">
-                <h1 onclick="musicplay()" id="start">播放</h1>
+                <button type="button"  onclick="musicplay()" id="start"><h1>播放</h1></button>
             </div>
         </section>
     </body>
