@@ -56,10 +56,35 @@
                 onclick="{ MusicPlayer2();addLikability();goto('page_25-7.html'); }"></p>
     </div>
 
-    <div id="menu">
-        <button class=op onclick="Return()">RETURN</button>&nbsp;&nbsp;
-        <button class=op onClick="Save('场景5第25.4页','../主体/sites/s5/page_25-4')">SAVE</button>&nbsp;&nbsp;
-        <button class=op>CONFIG</button>&nbsp;&nbsp;
+    <div class="menuwindow" id="config">
+        <h1 class="menutitle" id="config_h1">用户名：none</h1>
+        <div class="menubox">
+            <span class="menuitemleft" >达成成就</span>
+            <span class="menuitemright" id="achievement_"></span>
+        </div>
+        <div class="menubox">
+            <span class="menuitemleft" >音量</span>
+            <span class="menuitemright" id="volume_"><form><input id="volume" type="range" onchange="CV()" min="0" max="100" value="90"></form></span>
+        </div>
+        <button id="menuback" onclick="Config()">返回</button>
+    </div>
+
+    <div class="menuwindow" id="save">
+        <h1 class="menutitle" id="save_h1">用户名：none</h1>
+        <div class="menubox">
+            <span class="menuitemleft" >当前进度:</span>
+            <span class="menuitemright" id="process_">未知</span>
+        </div>
+        <div class="menubutton">
+            <button id="save_check" onclick="Save()">保存</button>
+        </div>
+        <button id="menuback" onclick="_Save_()">返回</button>
+    </div>
+
+    <div id = "menu">
+        <button class = op id="op_return" onClick="Return()">RETURN</button>&nbsp;&nbsp;
+        <button class = op id="op_save" onClick="Save_('5','25.4')">SAVE</button>&nbsp;&nbsp;
+        <button class = op id="op_config" onclick="Config()">CONFIG</button>&nbsp;&nbsp;
     </div>
 </body>
 

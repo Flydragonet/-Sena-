@@ -68,7 +68,8 @@
         <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/mute.mp3" volume="1.0"></audio>
         <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src="../../素材/音乐/mute.mp3" volume="1.0"></audio>
         <script>
-            var nowplay, num = 0;
+            var nowplay, num = 0, nowvolume = 1;
+            window.localStorage.nowvolume = 1;
             function musicplay(){
                 setInterval(function(){
                 if (nowplay != window.localStorage.nowbgm)
@@ -77,8 +78,12 @@
                     $("#music" + num).animate({volume:"0.0"}, 2000);
                     num = (num + 1) % 2; //取模，实现交叉渐变
                     document.getElementById("music" + num).src = "../../素材/音乐/" + window.localStorage.nowbgm + ".mp3";
-                    $("#music" + num).animate({volume:"1.0"}, 2000);
+                    $("#music" + num).animate({volume:nowvolume}, 2000);
                 }
+                if (nowvolume != window.localStorage.nowvolume){
+                    nowvolume = window.localStorage.nowvolume;
+                    $("#music" + num).animate({volume:nowvolume}, 200);
+                } // 音量调节
                 }, 1000);
             }
         </script>

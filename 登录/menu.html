@@ -67,7 +67,10 @@
         <div class="container">
             <h2 id="logintitle"></h2>
             <script>
-                document.getElementById("logintitle").innerHTML = "欢迎，" + window.localStorage.username;
+                var array = JSON.parse(window.localStorage.userArr);
+                var index = window.localStorage.userid;
+                document.getElementById("logintitle").innerHTML = "欢迎，" + array[index].username;
+                // document.getElementById("logintitle").innerHTML = "欢迎，" + window.localStorage.username;
             </script>
             <p><a href="../主体/sites/s1/page_2-1.html">新游戏</a></p>
             <p><a href="" id="continuegame">继续游戏</a></p>
@@ -85,7 +88,9 @@
                 else
                 {
                     document.getElementById("continuegame").style.color = "#ffffff";
-                    document.getElementById("continuegame").href = window.localStorage.GameAddress + ".html";
+                    var array = JSON.parse(window.localStorage.userArr);
+                    var index = window.localStorage.userid;
+                    document.getElementById("continuegame").href = array[index].GameAddress;
                 }
             </script>
 

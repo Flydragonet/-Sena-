@@ -17,7 +17,7 @@
         <style>
             body{background-image: url("../../../素材/背景/ETC_BK008D.png");}
         </style>
-	<audio id="music" src = '' ></audio>
+	    <audio id="music" src = '' ></audio>
         <audio id="music2" src = '' ></audio>
     </head>
 
@@ -40,12 +40,39 @@
         <div class="right">
             <img id = "right" src="../../../素材/背景/transparrent.png">
         </div>
+
         
-        <div id = "menu">
-            <button class = op onClick="Return()">RETURN</button>&nbsp;&nbsp;
-            <button class = op onClick="Save('场景1第3页','../主体/sites/s1/page_3')">SAVE</button>&nbsp;&nbsp;
-            <button class = op>CONFIG</button>&nbsp;&nbsp;
+        <div class="menuwindow" id="config">
+            <h1 class="menutitle" id="config_h1">用户名：none</h1>
+            <div class="menubox">
+                <span class="menuitemleft" >达成成就</span>
+                <span class="menuitemright" id="achievement_"></span>
+            </div>
+            <div class="menubox">
+                <span class="menuitemleft" >音量</span>
+                <span class="menuitemright" id="volume_"><form><input id="volume" type="range" onchange="CV()" min="0" max="100" value="60"></form></span>
+            </div>
+            <button id="menuback" onclick="Config()">返回</button>
         </div>
+
+        <div class="menuwindow" id="save">
+            <h1 class="menutitle" id="save_h1">用户名：none</h1>
+            <div class="menubox">
+                <span class="menuitemleft" >当前进度:</span>
+                <span class="menuitemright" id="process_">未知</span>
+            </div>
+            <div class="menubutton">
+                <button id="save_check" onclick="Save('1','3')">保存</button>
+            </div>
+            <button id="menuback" onclick="Save_('1','3')">返回</button>
+        </div>
+
+        <div id = "menu">
+            <button class = op id="op_return" onClick="Return()">RETURN</button>&nbsp;&nbsp;
+            <button class = op id="op_save" onClick="Save_('1','3')">SAVE</button>&nbsp;&nbsp;
+            <button class = op id="op_config" onclick="Config()">CONFIG</button>&nbsp;&nbsp;
+        </div>
+        
 		
     </body>
 </html>

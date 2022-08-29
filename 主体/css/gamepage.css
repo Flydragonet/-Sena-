@@ -213,3 +213,123 @@ body{
     color: rgb(169, 209, 255);
     /*background-color: rgba(231, 157, 18, 0.459);*/
 }
+
+
+
+/* gamebutton :  */
+
+.menuwindow{
+    width: 800px;
+    height: 500px;
+    position: fixed;
+    top: 50%;left: 50%;transform: translate(-50%, -50%); /* 居中 */
+    visibility: hidden;
+    /* background: rgba(60, 213, 252, 0.3); */
+    background-image: linear-gradient(rgba(3, 196, 244, 0.45),rgba(14, 228, 168, 0.3),rgba(60, 213, 252, 0.3));
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 3px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+.menuwindow.active{
+    visibility: visible;
+    transition: 0.5s;
+}
+#config_h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#save_h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.menutitle{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: rgba(0, 0, 0, 0.8) 2px 4px 4px;
+    letter-spacing: 3px;
+}
+
+.menubox{
+    margin: 50px 40px;
+    background-color: antiquewhite;
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 60px;
+}
+
+.menubox:nth-child(2){
+    margin-top: 70px;
+}
+
+.menuitemleft{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: STZhongsong;
+    position: relative;
+    margin-top: 10px;
+    top: 5px;
+    /* color: rgb(4, 0, 245); */
+    color:green;
+    float: left;
+    left: 15%;
+    letter-spacing: 0.5em;
+}
+.menuitemright{
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 10px;
+    top: 5px;
+    color: green;
+    float: right;
+    right: 20%;
+    letter-spacing: 0.5em;
+}
+
+.menubutton{
+}
+
+#volume_{
+    right: 17%;
+}
+
+
+#menuback{
+    position: fixed;
+    top: 90%;left: 50%;transform: translate(-50%, -50%);
+    padding: 10px 20px;
+}
+
+#save_check{
+    position: fixed;
+    top: 60%;left: 50%;transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    font: 30px STZhongsong;
+    font-weight: 600;
+    color:green;
+    border: 2px white;
+    background-color:antiquewhite
+}
+
+#save_check:hover{
+    background-color: blue;
+    color: #fff;
+}
+
+#achievement_{
+    font-weight: 800;
+}
+
+#process_{
+    font-family: STZhongsong;
+    right:4%;
+}
