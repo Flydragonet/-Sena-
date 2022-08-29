@@ -28,12 +28,15 @@ function next_small() {
             document.getElementById("small_pic").src = "../../../素材/小立绘/" + op.small[click] + ".png";
             $("#small_pic").fadeIn();
         }
+        else {
+            document.getElementById("small_pic").src = "../../../素材/小立绘/blacklogo.png";
+        }
     }
     else {
         if (op.small[click - 1] != op.small[click]) {
             $("#small_pic").hide();
             if (op.small[click] == "none") {
-                document.getElementById("small_pic").src = "../../../素材/小立绘/transparrent.png";
+                document.getElementById("small_pic").src = "../../../素材/小立绘/blacklogo.png";
             }
             else {
                 document.getElementById("small_pic").src = "../../../素材/小立绘/" + op.small[click] + ".png";
