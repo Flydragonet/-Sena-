@@ -93,7 +93,8 @@ function next_move(ending) {
                 $("#selection_box").fadeIn();
                 break;
             case 2:
-
+                $("#_selection_box").fadeIn();
+                break;
         }
     }
 };

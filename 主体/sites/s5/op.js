@@ -11,7 +11,7 @@ var op =
             "（为什么有些西餐店的菜名这么长）","（算了，尝一口那个黄桃鹅肝吧，这可是在学校里吃不到的东西）",
             "（！！！口感竟如此绵密丝滑）","也就现在暑假能大吃特吃，过几周开学了又得控制饮食了呢",],
     
-    "small":["none","none","FA01A_A030","FA01A_A020","FA01A_A020","none","none","none","none","FA01A_A121"],
+    "small":["none","none","FA01A_B020","FA01A_B020","FA01A_B020","none","none","none","none","FA01A_B010"],
 
     "big":["none","none","ST01C_B020","ST01C_B020","ST01C_B020","ST01C_B020","ST01C_B020","ST01C_B020","ST01C_B010","ST01C_B010"],
 

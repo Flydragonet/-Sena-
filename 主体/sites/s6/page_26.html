@@ -18,7 +18,7 @@
             background-image: url("../../../素材/背景/BK016D.png");
         }
 
-        #selection_box {
+        #_selection_box {
             display: none;
         }
     </style>
@@ -46,22 +46,31 @@
         <img id="right" src="../../../素材/背景/transparrent.png">
     </div>
 
-    <div id="selection_box">
-        <p><input type="button" value="文艺学院风" class="selection" id="option1"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="贵气名媛风" class="selection" id="option2"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="复古暗黑风" class="selection" id="option3"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="高雅御姐风" class="selection" id="option1"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="街头甜酷风" class="selection" id="option2"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="新式国潮风" class="selection" id="option3"
-                onclick="{MusicPlayer2();goto('page_26-1.html');}"></p>
-        <p><input type="button" value="最炫民族风" class="selection" id="option1"
-                onclick="{MusicPlayer2();reduceLikability();goto('page_26-2.html');}"></p>
-    </div>
+    <table id="_selection_box">
+        <tr>
+            <td><input type="button" value="文艺学院风" class="_selection" id="option1"
+                onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+            <td><input type="button" value="贵气名媛风" class="_selection" id="option2"
+                onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="复古暗黑风" class="_selection" id="option3"
+                onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+            <td><input type="button" value="高雅御姐风" class="_selection" id="option1"
+                    onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="街头甜酷风" class="_selection" id="option2"
+                onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+            <td><input type="button" value="新式国潮风" class="_selection" id="option3"
+                onclick="{MusicPlayer2();goto('page_26-1.html');}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="最炫民族风" class="_selection" id="option1"
+                onclick="{MusicPlayer2();reduceLikability();goto('page_26-2.html');}"></td>
+        </tr>
+    </table>
 
     <div id="menu">
         <button class=op onclick="Return()">RETURN</button>&nbsp;&nbsp;

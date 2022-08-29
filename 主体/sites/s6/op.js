@@ -1,5 +1,5 @@
 var op = 
-{   "type":1,
+{   "type":2,
     
     "steps":10,
     
@@ -11,7 +11,7 @@ var op =
             "万一你以后有女朋友了，你可得陪她逛街哦","（“万一”是吧…………）",
             "好，那就从挑衣服开始吧","你感觉我适合什么穿衣风格呢？",],
     
-    "small":["none","none","FA01A_A060","FA01A_A060","none","FA01A_C030","FA01A_C030","none","FA01A_D020","FA01A_D020"],
+    "small":["none","none","FA01A_B030","FA01A_B030","none","FA01A_B010","FA01A_B010","none","FA01A_D020","FA01A_D020"],
 
     "big":["none","none","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_B030","ST01C_D020","ST01C_D020",],
 
