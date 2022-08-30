@@ -1,63 +1,70 @@
 <!DOCTYPE html>
-<title>和Sena酱的一日约会</title>
 <html>
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="素材/小立绘/FA01A_D020.png" />
+    <head>
+        <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+        <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="素材/音乐/mute.mp3"
+            volume="1.0"></audio>
+        <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src="素材/音乐/mute.mp3"
+            volume="1.0"></audio>
+        <script>
+            var nowplay, num = 0, nowvolume = 1;
+            window.localStorage.nowvolume = 1;
+            function musicplay() {
+                setInterval(function () {
+                    if (nowplay != window.localStorage.nowbgm) {
+                        nowplay = window.localStorage.nowbgm;
+                       $("#music" + num).animate({ volume: "0.0" }, 2000);
+                        num = (num + 1) % 2; //取模，实现交叉渐变
+                        document.getElementById("music" + num).src = "素材/音乐/" + window.localStorage.nowbgm + ".mp3";
+                        $("#music" + num).animate({ volume: nowvolume }, 2000);
+                    }
+                    if (nowvolume != window.localStorage.nowvolume) {
+                        nowvolume = window.localStorage.nowvolume;
+                        $("#music" + num).animate({ volume: nowvolume }, 200);
+                    } // 音量调节
+                }, 1000);
+            }
+        </script>
+    </head>
     <style>
-        body {
-            background-image: url("./登录/background.png");
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+        @import url("./主体/css/fonts.css");
+        html,body{
+            height:99%;
+            background-color:black;
         }
-    </style>
-    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
-    <style>
-        @import url("主体/css/fonts.css");
+        #start {
+            text-decoration: underline;
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            font-family: 方正清刻本悦宋简体;
+            text-shadow: 2px 2px 5px black;
+            line-height: 65px;
+            padding: 15px;
+
+            border-radius: 35px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+
+            position: absolute;
+            top: 40%;
+            left: 20%;
+        }
+
+        #start:hover {
+            background-color: rgba(0, 0, 0, 0.45);
+            box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+            transform: translateY(-5px);
+        }
 
         * {
             margin: 0;
             padding: 0;
         }
-
-        #logo {
-            width: 100%;
-            height: 100%;
-            opacity: 0.0;
-            z-index: 100;
-        }
-
-        #start {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            width: 240px;
-            margin-left: -120px;
-            text-align: center;
-            font-size: 60px;
-            color: white;
-            font-family: 方正清刻本悦宋简体;
-            text-shadow: 2px 2px 5px black;
-            opacity: 0.0;
-        }
     </style>
-    <script>
-        $(document).ready(function () {
-            $(window).load(function () {
-                $("#logo").animate({ opacity: "1.0" }, 3000);
-                setTimeout(function () { $("#start").animate({ opacity: "1.0" }, 1000); }, 3000);
-
-            })
-        })
-    </script>
-</head>
-
-<body>
-    <img src="./登录/logo.png" id="logo">
-    <button type="button" onclick="window.open('./主体/bgm/musicplayer.html')"><a id="start"
-            href="./登录/login.html">进入游戏</a></button>
-</body>
-
+    <body>
+        <iframe src="" width="0%" height="0%" frameborder="0" id="MAIN"></iframe>
+        <button id='start' type="button" onclick="window.localStorage.nowbgm='flower', musicplay(), window.document.getElementById('MAIN').src='./登录/welcome.html', window.document.getElementById('start').style.display='none', window.document.getElementById('MAIN').style.width='100%', window.document.getElementById('MAIN').style.height='100%'">
+            <h1>加载完毕，点击开始</h1>
+    </body>
 </html>

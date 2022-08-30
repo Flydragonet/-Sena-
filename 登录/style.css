@@ -256,7 +256,7 @@ section .color:nth-child(3) {
  
 /* 登录按钮样式 */
  
-.form .inputBox input[type="submit"] {
+.form .inputBox input[type="reset"] {
     background: #fff;
     color: #666;
     max-width: 100px;

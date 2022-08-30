@@ -98,7 +98,7 @@
 						<input type="password" placeholder="密码" id="password">
 					</div>
 					<div class="inputBox">
-						<input type="submit" value="登录" onclick="find_date()" id="input1">
+						<input type="reset" value="登录" onclick="find_date()" id="input1">
 					</div>
 					<script>
 						function find_date() {
@@ -135,7 +135,7 @@
 							}
 							if (isHad) {  //如果存在
 								if (password_text == array[index].password) {
-									alert("登入成功");
+									//alert("登入成功");
 									window.localStorage.userid = index;
 									var Arr = JSON.parse(window.localStorage.userArr);
 									window.localStorage.username = Arr[index].username;
@@ -152,7 +152,9 @@
 									window.localStorage.achi72 = 0;
 									window.localStorage.achi7 = Arr[index].achi7;
 									window.localStorage.achi8 = Arr[index].achi8;
-									window.open("menu.html");
+									//window.open("menu.html", '_self', option);
+									//window.location.replace("menu.html");
+									window.location.href = "menu.html";
 									return;
 								}
 								else {
