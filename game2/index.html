@@ -22,6 +22,10 @@
 
 	}
 
+	audio {
+		display: none;
+	}
+
 	.head {
 		text-align: center;
 		padding: 20px 0
@@ -122,6 +126,16 @@
 </style>
 <script>
 	window.onload = function () {
+		function playRight() {
+			//注意文件路径，且文件大小一般10kb以内
+			var a = document.getElementById("right");
+			a.play();
+		}
+		function playMiss() {
+			//注意文件路径，且文件大小一般10kb以内
+			var b = document.getElementById("miss");
+			b.play();
+		}
 		var oBox = $('#box'),
 			oBtn = getTagName(document, 'input')[0],
 			oMin = getClass(oBox, '.main')[0];
@@ -143,8 +157,10 @@
 				oI.style.top = '0';
 				oI.style.left = $fn.random([0, W - 24]) + 'px';
 				oI.innerHTML = '<img src="QQexp/' + $fn.random([1, 15]) + '.gif"/>'
+
 				$fn.Move(oI, 'top', k, H - 24, function () {
 					++t
+					playMiss();
 					aB[1].innerHTML = t
 					$fn.shaKe(oBox, 'top', 10, function () {
 						if (!score()) fn()
@@ -197,12 +213,13 @@
 
 			oI.onmousedown = function () {
 				clearInterval(oI.timer)
-				this.innerHTML = '<img src="QQexp/s.gif"/>'
+				this.innerHTML = '<img src="QQexp/s.gif" width="10px"/>'
 				oI.timer = null;
 				++b
 				k += 0.2
 				k.toFixed(1)
 				aB[0].innerHTML = b
+				playRight();
 				$fn.shaKe(oI, 'left', 10, function () {
 					if (!score()) fn()
 				})
@@ -212,7 +229,8 @@
 </script>
 
 <body>
-
+	<audio src="../素材/音乐/right.mp3" id="right"></audio>
+	<audio src="../素材/音乐/miss.mp3" id="miss"></audio>
 	<div class="head">
 		<h1 style="color: rgb(6, 6, 6);">你有多快？</h1>
 		<br>
