@@ -56,6 +56,10 @@
 					}
 				}
 			});
+			if(window.localStorage.username){
+				$("#username").val(window.localStorage.username);
+				$("#password").val(window.localStorage.password);
+			}
 		});
 
 	</script>
@@ -139,6 +143,7 @@
 									window.localStorage.userid = index;
 									var Arr = JSON.parse(window.localStorage.userArr);
 									window.localStorage.username = Arr[index].username;
+									window.localStorage.password = Arr[index].password;
 									window.localStorage.GameName = Arr[index].GameName;
 									window.localStorage.GameAddress = Arr[index].GameAddress;
 									window.localStorage.likability = Arr[index].likability;
