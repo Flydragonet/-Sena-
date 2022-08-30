@@ -1,4 +1,5 @@
 //主程序,业务逻辑
+
 (function () {
 	var _DATA = [		//地图数据
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -49,6 +50,7 @@
 	//启动页
 	(function () {
 		var stage = game.createStage();
+
 		//logo
 		stage.createItem({
 			x: game.width / 2,
@@ -96,6 +98,7 @@
 			}
 		});
 		//事件绑定
+
 		stage.bind('keydown', function (e) {
 			switch (e.keyCode) {
 				case 13:
@@ -255,6 +258,7 @@
 				context.fillStyle = '#FFF';
 				context.fillText(_SCORE, this.x + 12, this.y);
 			}
+
 		});
 		//状态文字
 		stage.createItem({
@@ -492,10 +496,12 @@
 			}
 		});
 		//事件绑定
+
 		stage.bind('keydown', function (e) {
 			switch (e.keyCode) {
 				case 13: //回车
 				case 32: //空格
+
 					this.status = this.status == 2 ? 1 : 2;
 					break;
 				case 39: //右

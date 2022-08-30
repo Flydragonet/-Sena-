@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>和Sena酱的一日约会</title>
-        <link rel="shortcut icon" href="../../../素材/小立绘/FA01A_D020.png"/>
-        <link rel="stylesheet" href="../../css/gamepage.css" />
-        <script src="../../js/jquery-3.6.0.js"></script>
-        <script src="op13.js"></script>
-        <script src="../../js/gamecontroll.js"></script>
-        <!--当前界面的bgm-->
-        <script>
-            window.localStorage.nowbgm = "test";
-        </script>
 
-        <style>
-            body{background-image: url("../../../素材/背景/ETC_BK017D.png");}
-        </style>
-        <audio id="music" src = '' ></audio>
-        <audio id="music2" src = '' ></audio>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>和Sena酱的一日约会</title>
+    <link rel="shortcut icon" href="../../../素材/小立绘/FA01A_D020.png" />
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="op13.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <!--当前界面的bgm-->
+    <script>
+        window.localStorage.nowbgm = "test";
+    </script>
 
-    <body>
-        <div id = "dialog"  onclick="{ MusicPlayer(); next_move();}"></div>
-        <div id = "text-box"  onclick="{ MusicPlayer(); next_move();}">
-            <p id="name"></p>
-            <p id="texts"></p>
-        </div>
-        
-        <div id = "small">
-            <img id = "small_pic" src="../../../素材/背景/transparrent.png">
-        </div>
-        <div class="left">
-            <img id = "left" src="../../../素材/背景/transparrent.png">
-        </div>
-        <div class="middle">
-            <img id = "middle" src="../../../素材/背景/transparrent.png">
-        </div>
-        <div class="right">
-            <img id = "right" src="../../../素材/背景/transparrent.png">
-        </div>
-        
-        <div class="menuwindow" id="config">
-            <h1 class="menutitle" id="config_h1">用户名：none</h1>
-            <div class="menubox">
-                <span class="menuitemleft" >达成成就</span>
-                <span class="menuitemright" id="achievement_"></span>
-            </div>
-            <div class="menubox">
-                <span class="menuitemleft" >音量</span>
-                <span class="menuitemright" id="volume_"><form><input id="volume" type="range" onchange="CV()" min="0" max="100" value="90"></form></span>
-            </div>
-            <button id="menuback" onclick="Config()">返回</button>
-        </div>
+    <style>
+        body {
+            background-image: url("../../../素材/背景/ETC_BK017D.png");
+        }
+    </style>
+    <audio id="music" src=''></audio>
+    <audio id="music2" src=''></audio>
+</head>
 
-        <div class="menuwindow" id="save">
-            <h1 class="menutitle" id="save_h1">用户名：none</h1>
-            <div class="menubox">
-                <span class="menuitemleft" >当前进度:</span>
-                <span class="menuitemright" id="process_">未知</span>
-            </div>
-            <div class="menubutton">
-                <button id="save_check" onclick="Save('3','13')">保存</button>
-            </div>
-            <button id="menuback" onclick="Save_('3','13')">返回</button>
-        </div>
+<body>
+    <div id="dialog" onclick="{ MusicPlayer(); next_move();}"></div>
+    <div id="text-box" onclick="{ MusicPlayer(); next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
 
-        <div id = "menu">
-            <button class = op id="op_return" onClick="Return()">RETURN</button>&nbsp;&nbsp;
-            <button class = op id="op_save" onClick="Save_('3','13')">SAVE</button>&nbsp;&nbsp;
-            <button class = op id="op_config" onclick="Config()">CONFIG</button>&nbsp;&nbsp;
-        </div>
+    <div id="small">
+        <img id="small_pic" src="../../../素材/背景/transparrent.png">
+    </div>
+    <div class="left">
+        <img id="left" src="../../../素材/背景/transparrent.png">
+    </div>
+    <div class="middle">
+        <img id="middle" src="../../../素材/背景/transparrent.png">
+    </div>
+    <div class="right">
+        <img id="right" src="../../../素材/背景/transparrent.png">
+    </div>
 
-    </body>
+    <div class="menuwindow" id="config">
+        <h1 class="menutitle" id="config_h1">用户名：none</h1>
+        <div class="menubox">
+            <span class="menuitemleft">达成成就</span>
+            <span class="menuitemright" id="achievement_"></span>
+        </div>
+        <div class="menubox">
+            <span class="menuitemleft">音量</span>
+            <span class="menuitemright" id="volume_">
+                <form><input id="volume" type="range" onchange="CV()" min="0" max="100" value="90"></form>
+            </span>
+        </div>
+        <button id="menuback" onclick="Config()">返回</button>
+    </div>
+
+    <div class="menuwindow" id="save">
+        <h1 class="menutitle" id="save_h1">用户名：none</h1>
+        <div class="menubox">
+            <span class="menuitemleft">当前进度:</span>
+            <span class="menuitemright" id="process_">未知</span>
+        </div>
+        <div class="menubutton">
+            <button id="save_check" onclick="Save('3','13')">保存</button>
+        </div>
+        <button id="menuback" onclick="Save_('3','13')">返回</button>
+    </div>
+
+    <div id="menu">
+        <button class=op id="op_return" onClick="Return()">RETURN</button>&nbsp;&nbsp;
+        <button class=op id="op_save" onClick="Save_('3','13')">SAVE</button>&nbsp;&nbsp;
+        <button class=op id="op_config" onclick="Config()">CONFIG</button>&nbsp;&nbsp;
+    </div>
+
+</body>
+
 </html>
