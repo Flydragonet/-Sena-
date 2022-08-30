@@ -15,7 +15,7 @@
 
 	body {
 		font: 15px/1.5em "微软雅黑";
-		background-image: url("../素材/背景/BK016D.png");
+		background-image: url("../素材/背景/MALL.png");
 		background-repeat: no-repeat;
 		background-size: 100%;
 
@@ -121,7 +121,7 @@
 	.sena {
 		width: 300px;
 		float: right;
-		margin-top: 60px;
+		margin-top: 200px;
 	}
 </style>
 <script>
@@ -197,9 +197,10 @@
 						alert("获得成就“身手敏捷”")
 					}
 					if (totalScore2 == -2) {
-						array[index].achi7 = array[index].achi7 + 1;
+						array[index].achi72 = 1;
 						alert("隐藏成就进度")
-						if (array[index].achi7 == 2) {
+						if (array[index].achi71 + array[index].achi72 == 2) {
+							array[index].achi7 = 2;
 							alert("达成隐藏成就“进击的鶸”");
 						}
 					}
@@ -241,7 +242,7 @@
 	</div>
 	<div id="box" class="wrap">
 		<div class="side">
-			<p style="color:rgb(89, 246, 220);">得分：<b style="color:rgb(89, 246, 220);">0</b> 分</p>
+			<p style="color:black;">得分：<b style="color:black;">0</b> 分</p>
 			<p style="color:red;">失分：<b style="color:red;">0</b> 分</p>
 		</div>
 		<div class="main"></div>

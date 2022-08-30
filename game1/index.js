@@ -579,7 +579,7 @@
 						alert("获得成就“镀金的勇者”")
 					}
 					if (totalScore == -1) {
-						array[index].achi7 = 1;
+						array[index].achi71 = 1;
 						alert("隐藏成就进度")
 					}
 
