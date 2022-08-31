@@ -100,7 +100,7 @@ function next_move(ending) {
 };
 
 //保存函数
-function Save(section='0',page='0') {
+function Save(section = '0', page = '0') {
     var GameAddress = '../' + window.location.href.split('/-Sena-/')[1]; // 更新了页面保存逻辑，可以减少出错的概率
     var GameName = window.localStorage.temp_gamename; // 可以再少改一个参数，减少出错率
     var index = window.localStorage.userid;
@@ -122,26 +122,26 @@ function Return() {
 }
 
 // config 和 save 菜单
-window.onload = function(){
+window.onload = function () {
     var array = JSON.parse(window.localStorage.userArr);
     var index = window.localStorage.userid;
     document.getElementById("config_h1").innerHTML = array[index].username;
     document.getElementById("save_h1").innerHTML = array[index].username;
     var ach = 0;
-    if(array[index].achi1 == 1) ach++;
-    if(array[index].achi2 == 1) ach++;
-    if(array[index].achi3 == 1) ach++;
-    if(array[index].achi4 == 1) ach++;
-    if(array[index].achi5 == 1) ach++;
-    if(array[index].achi6 == 1) ach++;
-    if(array[index].achi7 == 1) ach++;
-    if(array[index].achi8 == 1) ach++;
+    if (array[index].achi1 == 1) ach++;
+    if (array[index].achi2 == 1) ach++;
+    if (array[index].achi3 == 1) ach++;
+    if (array[index].achi4 == 1) ach++;
+    if (array[index].achi5 == 1) ach++;
+    if (array[index].achi6 == 1) ach++;
+    if (array[index].achi7 == 2) ach++;
+    if (array[index].achi1 + array[index].achi2 + array[index].achi3 + array[index].achi4 == 4) ach++;
     document.getElementById("achievement_").innerHTML = ach + "/8";
 }
 
-function CV(){
+function CV() {
     var value1 = document.getElementById("volume").value;
-    var percent = value1/100;
+    var percent = value1 / 100;
     window.localStorage.nowvolume = percent;
 }
 
@@ -192,16 +192,16 @@ function reduceLikability2() {
 }
 
 // menu菜单界面
-function Config(){
+function Config() {
     document.getElementById('config').classList.toggle('active');
 }
-function Save_(section,page){
-    var gamename = '场景'+section+'第'+page+'页';
+function Save_(section, page) {
+    var gamename = '场景' + section + '第' + page + '页';
     document.getElementById("process_").innerHTML = gamename;
     document.getElementById('save').classList.toggle('active');
-    window.localStorage.temp_gamename = gamename; 
+    window.localStorage.temp_gamename = gamename;
 }
-function _Save_(){ // 返回按钮，不用改参数了（偷懒）
+function _Save_() { // 返回按钮，不用改参数了（偷懒）
     document.getElementById('save').classList.toggle('active');
 }
 
