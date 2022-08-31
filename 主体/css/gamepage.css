@@ -225,37 +225,33 @@ body{
     top: 50%;left: 50%;transform: translate(-50%, -50%); /* 居中 */
     visibility: hidden;
     /* background: rgba(60, 213, 252, 0.3); */
-    background-image: linear-gradient(rgba(3, 196, 244, 0.45),rgba(14, 228, 168, 0.3),rgba(60, 213, 252, 0.3));
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     z-index: 9999;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-right: 3px solid rgba(255, 255, 255, 0.2);
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
 }
 .menuwindow.active{
     visibility: visible;
     transition: 0.5s;
 }
 #config_h1{
-    color: #fff;
     text-align: center;
     margin-top: 40px;
 }
 
 #save_h1{
-    color: #fff;
     text-align: center;
     margin-top: 40px;
 }
 
 .menutitle{
     font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    font-weight: bolder;
-    text-shadow: rgba(0, 0, 0, 0.8) 2px 4px 4px;
+    font-weight: 600;
     letter-spacing: 3px;
+    text-shadow: rgba(0, 0, 0, 0.8) 2px 4px 4px;
+    color: #fff;
 }
 
 .menubox{
@@ -273,30 +269,26 @@ body{
 .menuitemleft{
     font-size: 30px;
     font-weight: 600;
-    font-family: STZhongsong;
     position: relative;
     margin-top: 10px;
-    top: 5px;
-    /* color: rgb(4, 0, 245); */
-    color:green;
+    width: 40%;
+    left:10%;
+    color: #00aaff;
     float: left;
-    left: 15%;
     letter-spacing: 0.5em;
+    text-align: center;
 }
 .menuitemright{
     font-size: 30px;
     font-weight: 600;
     position: relative;
     margin-top: 10px;
-    top: 5px;
-    color: green;
+    color: #00aaff;
     float: right;
     right: 20%;
     letter-spacing: 0.5em;
 }
 
-.menubutton{
-}
 
 #volume_{
     right: 17%;
@@ -307,6 +299,17 @@ body{
     position: fixed;
     top: 90%;left: 50%;transform: translate(-50%, -50%);
     padding: 10px 20px;
+    color:#00aaff;
+    font: 20px STZhongsong;
+    font-weight: 600;
+    background-color: antiquewhite;
+    border: 2px white;
+    border-radius: 20px;
+}
+
+#menuback:hover{
+    background-color:#00aaff;
+    color: #fff;
 }
 
 #save_check{
@@ -315,18 +318,20 @@ body{
     padding: 20px 30px;
     font: 30px STZhongsong;
     font-weight: 600;
-    color:green;
+    color: #00aaff;
     border: 2px white;
-    background-color:antiquewhite
+    background-color:antiquewhite;
+    border-radius: 20px;
 }
 
 #save_check:hover{
-    background-color: blue;
+    background-color:#00aaff;
     color: #fff;
 }
 
 #achievement_{
-    font-weight: 800;
+    font-family: STZhongsong;
+    font-weight: 2000;
 }
 
 #process_{

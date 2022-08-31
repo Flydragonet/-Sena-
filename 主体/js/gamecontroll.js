@@ -109,7 +109,6 @@ function Save(section = '0', page = '0') {
         return;
     }
     var array = JSON.parse(window.localStorage.userArr);
-    alert(array[index].username);
     array[index].GameName = GameName;
     array[index].GameAddress = GameAddress;
     window.localStorage.userArr = JSON.stringify(array);
