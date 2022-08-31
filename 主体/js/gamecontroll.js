@@ -165,28 +165,28 @@ function addLikability() {
     var index = window.localStorage.userid;
     var array = JSON.parse(window.localStorage.userArr);
     array[index].likability = array[index].likability + 1;
-    alert("好感度+1，当前好感度是：" + array[index].likability);
+    /*alert("好感度+1，当前好感度是：" + array[index].likability);*/
     window.localStorage.userArr = JSON.stringify(array);
 }
 function addLikability2() {
     var index = window.localStorage.userid;
     var array = JSON.parse(window.localStorage.userArr);
     array[index].likability = array[index].likability + 2;
-    alert("好感度+2，当前好感度是：" + array[index].likability);
+    /*alert("好感度+2，当前好感度是：" + array[index].likability);*/
     window.localStorage.userArr = JSON.stringify(array);
 }
 function reduceLikability() {
     var index = window.localStorage.userid;
     var array = JSON.parse(window.localStorage.userArr);
     array[index].likability = array[index].likability - 1;
-    alert("好感度-1，当前好感度是：" + array[index].likability);
+    /*alert("好感度-1，当前好感度是：" + array[index].likability);*/
     window.localStorage.userArr = JSON.stringify(array);
 }
 function reduceLikability2() {
     var index = window.localStorage.userid;
     var array = JSON.parse(window.localStorage.userArr);
     array[index].likability = array[index].likability - 2;
-    alert("好感度-2，当前好感度是：" + array[index].likability);
+    /*alert("好感度-2，当前好感度是：" + array[index].likability);*/
     window.localStorage.userArr = JSON.stringify(array);
 }
 
