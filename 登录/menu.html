@@ -78,15 +78,16 @@
                 document.getElementById("logintitle").innerHTML = "欢迎，" + array[index].username;
                 // document.getElementById("logintitle").innerHTML = "欢迎，" + window.localStorage.username;
             </script>
-            <p><a href="../主体/sites/s1/page_2-1.html">新游戏</a></p>
+            <p><a href="../主体/sites/s1/page_2-1.html" id="normal">新游戏</a></p>
             <p><a href="" id="continuegame">继续游戏</a></p>
-            <p><a href="../成就系统/achievement.html">成就</a></p>
-            <p><a href="./introduction/intro.html">关于我们</a></p>
-            <p><a href="login.html" style="font-size:30px;text-align: right;">退出登录</a></p>
+            <p><a href="../成就系统/achievement.html" id="normal">成就</a></p>
+            <p><a href="./introduction/intro.html" id="normal">关于我们</a></p>
+            <p><a href="login.html" style="font-size:30px;text-align: right;" id="normal">退出登录</a></p>
 
             <script>
                 //如果没有存档数据，就让"继续游戏"的字体变灰
-                if (window.localStorage.GameAddress == "undefined" || window.localStorage.GameAddress == "../undefined")
+                var array = JSON.parse(window.localStorage.userArr);
+                if (array[window.localStorage.userid].GameAddress == undefined || array[window.localStorage.userid].GameAddress == "undefined" || array[window.localStorage.userid].GameAddress == "../undefined")
                 {
                     document.getElementById("continuegame").style.color = "#aaaaaa";
                     document.getElementById("continuegame").href = "menu.html";
@@ -94,7 +95,6 @@
                 else
                 {
                     document.getElementById("continuegame").style.color = "#ffffff";
-                    var array = JSON.parse(window.localStorage.userArr);
                     var index = window.localStorage.userid;
                     document.getElementById("continuegame").href = array[index].GameAddress;
                 }

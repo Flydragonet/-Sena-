@@ -101,7 +101,7 @@ function next_move(ending) {
 
 //保存函数
 function Save(section = '0', page = '0') {
-    var GameAddress = '../' + window.location.href.split('/-Sena-/')[1]; // 更新了页面保存逻辑，可以减少出错的概率
+    var GameAddress = '../主体/sites/' + window.location.href.split('/sites/')[1]; // 更新了页面保存逻辑，可以减少出错的概率
     var GameName = window.localStorage.temp_gamename; // 可以再少改一个参数，减少出错率
     var index = window.localStorage.userid;
     if (index == -1 || index == undefined) {
@@ -117,7 +117,7 @@ function Save(section = '0', page = '0') {
 
 //返回主页
 function Return() {
-    window.open('../../../登录/menu.html');
+    window.location.href = '../../../登录/menu.html';
 }
 
 // config 和 save 菜单

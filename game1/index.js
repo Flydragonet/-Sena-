@@ -580,10 +580,10 @@
 					}
 					if (totalScore == -1) {
 						array[index].achi71 = 1;
-						alert("隐藏成就进度")
+						//alert("隐藏成就进度")
 					}
 
-					alert("好感度增加" + totalScore + "当前好感度是：" + array[index].likability);
+					//alert("好感度增加" + totalScore + "当前好感度是：" + array[index].likability);
 					window.localStorage.userArr = JSON.stringify(array);
 					var url = "../主体/sites/s6/page_27-1.html";
 					window.location.href = url;

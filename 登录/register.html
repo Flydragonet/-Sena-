@@ -128,6 +128,8 @@
 							array.push(obj);
 							window.localStorage.userArr = JSON.stringify(array);
 							window.alert("注册成功！");
+							window.localStorage.username = username;
+							window.localStorage.password = password;
 							// localStorage.setItem("username",username);
 							// localStorage.setItem("password",password);
 							window.location.assign("login.html");
